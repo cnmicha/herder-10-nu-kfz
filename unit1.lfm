@@ -6,8 +6,8 @@ object Form1: TForm1
   Caption = 'Form1'
   ClientHeight = 440
   ClientWidth = 530
-  LCLVersion = '1.0.4.0'
-  object DBGrid1: TDBGrid
+  LCLVersion = '1.2.6.0'
+  object dbgKennz: TDBGrid
     Left = 16
     Height = 257
     Top = 16
@@ -32,6 +32,7 @@ object Form1: TForm1
     Top = 30
     Width = 75
     Caption = 'Neu einlesen'
+    OnClick = Button1Click
     TabOrder = 1
   end
 end
