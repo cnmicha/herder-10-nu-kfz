@@ -1,0 +1,38 @@
+object Form1: TForm1
+  Left = 263
+  Height = 440
+  Top = 147
+  Width = 530
+  Caption = 'Form1'
+  ClientHeight = 440
+  ClientWidth = 530
+  LCLVersion = '1.0.4.0'
+  object DBGrid1: TDBGrid
+    Left = 16
+    Height = 257
+    Top = 16
+    Width = 353
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'Kürzel'
+      end    
+      item
+        Title.Caption = 'Ort'
+      end    
+      item
+        Title.Caption = 'Bundesland'
+      end>
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 417
+    Height = 25
+    Top = 30
+    Width = 75
+    Caption = 'Neu einlesen'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+end
