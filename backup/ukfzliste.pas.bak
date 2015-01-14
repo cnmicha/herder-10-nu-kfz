@@ -60,22 +60,22 @@ begin
   aktuell:=0;
 end;
 
-function getAnz():CARDINAL;
+function TListe.getAnz():CARDINAL;
 begin
   result:= Length(liste);
 end;
 
-function getKennzeichen(Itemindex:CARDINAL):STRING;
+function TListe.getKennzeichen(Itemindex:CARDINAL):STRING;
 begin
   result:= liste[ItemIndex].getKennzeichen;
 end;
 
-function getOrt(Itemindex:CARDINAL):STRING;
+function TListe.getOrt(Itemindex:CARDINAL):STRING;
 begin
   result:= liste[ItemIndex].getOrt;
 end;
 
-function getBundesland(Itemindex:CARDINAL):STRING;
+function TListe.getBundesland(Itemindex:CARDINAL):STRING;
 begin
   result:= liste[ItemIndex].getBundesland;
 end;

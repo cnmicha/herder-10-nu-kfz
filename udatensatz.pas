@@ -42,7 +42,7 @@ var data:TStringList;
 begin
      data := TStringList.Create;
      data.Delimiter := ';';
-     data.StrictDelimiter := True; //no space delimiter
+     data.StrictDelimiter := True; //space is not a delimiter
      data.DelimitedText := datenstring;
 
      self.kennzeichen := data[0];

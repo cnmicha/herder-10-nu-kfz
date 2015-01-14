@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, DBGrids,
-  StdCtrls, Grids, uKfzListe;
+  StdCtrls, Grids, Buttons, uKfzListe;
 
 type
 
@@ -14,7 +14,8 @@ type
 
   TForm1 = class(TForm)
     Button1: TButton;
-    dbgKennz: TDBGrid;
+    Label1: TLabel;
+    lstbKennz: TListBox;
     procedure Button1Click(Sender: TObject);
   private
     { private declarations }
@@ -41,7 +42,8 @@ begin
 
      for i:= 0 to liste.getAnz()-1 do
      begin
-       dbgKennz.Records.Add;
+       //TODO
+       lstbKennz.Items.Add(liste.getKennzeichen(i));
      end;
 end;
 

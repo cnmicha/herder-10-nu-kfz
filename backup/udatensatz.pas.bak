@@ -42,7 +42,7 @@ var data:TStringList;
 begin
      data := TStringList.Create;
      data.Delimiter := ';';
-     data.StrictDelimiter := True; //no space delimiter
+     data.StrictDelimiter := True; //space is not a delimiter
      data.DelimitedText := datenstring;
 
      self.kennzeichen := data[0];
@@ -52,17 +52,17 @@ end;
 
 procedure TDatensatz.setKennzeichen(kennzeichenStr: String);
 begin
-     self.kennzeichen := kennzeichen;
+     self.kennzeichen := kennzeichenStr;
 end;
 
 procedure TDatensatz.setOrt(ortStr: String);
 begin
-     self.ort := ort;
+     self.ort := ortStr;
 end;
 
 procedure TDatensatz.setBudesland(bundeslandStr: String);
 begin
-     self.bundesland := bundesland;
+     self.bundesland := bundeslandStr;
 end;
 
 function TDatensatz.getKennzeichen(): String;
