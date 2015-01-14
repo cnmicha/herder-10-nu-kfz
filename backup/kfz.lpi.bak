@@ -47,7 +47,7 @@
         <ComponentName Value="Form1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="Unit1"/>
+        <UnitName Value="unit1"/>
       </Unit1>
       <Unit2>
         <Filename Value="ukfzliste.pas"/>
