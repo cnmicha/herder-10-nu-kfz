@@ -13,21 +13,25 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
+    bnIndex: TButton;
     bnLesen: TButton;
-    bnSucheKennz: TButton;
-    bnSucheOrt: TButton;
-    bnSucheBundesland: TButton;
+    bnFilterKennz: TButton;
+    bnFilterOrt: TButton;
+    bnFilterBundesland: TButton;
+    lbIndex: TEdit;
     lbSucheKennz: TEdit;
     lbSucheOrt: TEdit;
     lbSucheBundesland: TEdit;
     Label1: TLabel;
     lbAnzahl: TLabel;
     lstKennz: TListBox;
+    procedure bnIndexClick(Sender: TObject);
     procedure bnLesenClick(Sender: TObject);
-    procedure bnSucheBundeslandClick(Sender: TObject);
-    procedure bnSucheOrtClick(Sender: TObject);
+    procedure bnFilterBundeslandClick(Sender: TObject);
+    procedure bnFilterOrtClick(Sender: TObject);
     procedure display(listbox: TListBox; anzLabel: TLabel; liste: TListe);
-    procedure bnSucheKennzClick(Sender: TObject);
+    procedure displayIndex(listbox: TListBox; anzLabel: TLabel; liste: TListe; index: CARDINAL);
+    procedure bnFilterKennzClick(Sender: TObject);
   private
     { private declarations }
   public
@@ -53,20 +57,29 @@ begin
      display(lstKennz, lbAnzahl, liste);
 end;
 
-procedure TForm1.bnSucheBundeslandClick(Sender: TObject);
+procedure TForm1.bnIndexClick(Sender: TObject);
 var liste: TListe;
 begin
      liste:= TListe.create;
-     liste.einlesenSucheBundesland('kfz.csv', lbSucheBundesland.text);
+     liste.einlesen('kfz.csv');
+
+     displayIndex(lstKennz, lbAnzahl, liste, StrToInt(lbIndex.Text));
+end;
+
+procedure TForm1.bnFilterBundeslandClick(Sender: TObject);
+var liste: TListe;
+begin
+     liste:= TListe.create;
+     liste.einlesenFilterBundesland('kfz.csv', lbSucheBundesland.text);
 
      display(lstKennz, lbAnzahl, liste);
 end;
 
-procedure TForm1.bnSucheOrtClick(Sender: TObject);
+procedure TForm1.bnFilterOrtClick(Sender: TObject);
 var liste: TListe;
 begin
      liste:= TListe.create;
-     liste.einlesenSucheOrt('kfz.csv', lbSucheOrt.Text);
+     liste.einlesenFilterOrt('kfz.csv', lbSucheOrt.Text);
 
      display(lstKennz, lbAnzahl, liste);
 end;
@@ -87,12 +100,21 @@ begin
      anzLabel.caption:= 'Gesamt: ' + intToStr(liste.getAnz);
 end;
 
-procedure TForm1.bnSucheKennzClick(Sender: TObject);
+procedure TForm1.displayIndex(listbox: TListBox; anzLabel: TLabel; liste: TListe; index: CARDINAL);
+var i: CARDINAL;
+begin
+     listbox.items.Clear;
+     listbox.Items.Add(liste.getKennzeichen(index) + ' | ' + liste.getOrt(index) + ' | ' + liste.getBundesland(index));
+
+     anzLabel.caption:= 'Gesamt: 1';
+end;
+
+procedure TForm1.bnFilterKennzClick(Sender: TObject);
 var liste: TListe;
 begin
 
      liste:= TListe.create;
-     liste.einlesenSucheKennzeichen('kfz.csv', lbSucheKennz.text);
+     liste.einlesenFilterKennzeichen('kfz.csv', lbSucheKennz.text);
 
      display(lstKennz, lbAnzahl, liste);
 end;

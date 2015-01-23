@@ -25,7 +25,7 @@
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
         <TopLine Value="72"/>
-        <CursorPos X="10" Y="85"/>
+        <CursorPos X="16" Y="86"/>
         <UsageCount Value="28"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -36,8 +36,8 @@
         <UnitName Value="uKfzListe"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="73"/>
-        <CursorPos X="37" Y="113"/>
+        <TopLine Value="90"/>
+        <CursorPos X="3" Y="97"/>
         <UsageCount Value="28"/>
         <Loaded Value="True"/>
       </Unit2>

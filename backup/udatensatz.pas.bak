@@ -35,7 +35,7 @@ end;
 procedure TDatensatz.definieren(datenstring: String);
 var data:TStringList;
 begin
-     data := TStringList.Create;
+     data:= TStringList.Create;
      data.Delimiter := ';';
      data.StrictDelimiter := True; //space is not a delimiter
      data.DelimitedText := datenstring;

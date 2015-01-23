@@ -17,9 +17,9 @@ TYPE TListe = class
                       constructor create;
                       destructor destroy;
                       procedure einlesen (datname: String);
-                      procedure einlesenSucheKennzeichen (datname,query: String);
-                      procedure einlesenSucheOrt (datname,query: String);
-                      procedure einlesenSucheBundesland (datname,query: String);
+                      procedure einlesenFilterKennzeichen (datname,query: String);
+                      procedure einlesenFilterOrt (datname,query: String);
+                      procedure einlesenFilterBundesland (datname,query: String);
                       function getAnz():CARDINAL;
                       function getKennzeichen(Itemindex:CARDINAL):STRING;
                       function getOrt(ItemIndex:CARDINAL):STRING;
@@ -63,7 +63,7 @@ begin
   aktuell:= 0;
 end;
 
-procedure TListe.einlesenSucheKennzeichen (datname,query: String);
+procedure TListe.einlesenFilterKennzeichen (datname,query: String);
 var f : TextFile;
 str : string;
 data:TStringList;
@@ -97,7 +97,7 @@ begin
 
 end;
 
-procedure TListe.einlesenSucheOrt (datname,query: String);
+procedure TListe.einlesenFilterOrt (datname,query: String);
 var f : TextFile;
 str : string;
 var data:TStringList;
@@ -131,7 +131,7 @@ begin
 
 end;
 
-procedure TListe.einlesenSucheBundesland (datname,query: String);
+procedure TListe.einlesenFilterBundesland (datname,query: String);
 var f : TextFile;
 str : string;
 var data:TStringList;

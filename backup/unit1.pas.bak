@@ -78,11 +78,10 @@ begin
 
      if(liste.getAnz > 0) then
      begin
-     for i:= 0 to liste.getAnz-1 do
-     begin
-       listbox.Items.Add(liste.getKennzeichen(i) + ' | ' + liste.getOrt(i) + ' | ' + liste.getBundesland(i));
-     end;
-     end;
+       for i:= 0 to liste.getAnz-1 do
+       begin
+         listbox.Items.Add(liste.getKennzeichen(i) + ' | ' + liste.getOrt(i) + ' | ' + liste.getBundesland(i));
+       end;
      end;
 
      anzLabel.caption:= 'Gesamt: ' + intToStr(liste.getAnz);

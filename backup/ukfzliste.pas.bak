@@ -67,10 +67,7 @@ procedure TListe.einlesenSucheKennzeichen (datname,query: String);
 var f : TextFile;
 str : string;
 data:TStringList;
-success:boolean;
 begin
-  success:=false;
-
   AssignFile(f,datname);
   reset(f);
   aktuell:=0;
@@ -91,15 +88,12 @@ begin
       liste[aktuell].definieren(str);
 
       INC(aktuell);
-      success:=true;
     end;
   end;
 
   CloseFile(f);
   anzahl:= aktuell;
   aktuell:= 0;
-
-  if(success = false) then anzahl:= 0;
 
 end;
 
