@@ -13,7 +13,7 @@ TYPE TDatensatz = class
                 bundesland: String;
                 constructor create;
                 destructor destroy;
-                procedure definieren (datenstring: String);
+                procedure definieren (user_kennz,user_ort,user_bundesland: String);
                 {*function getKennz: String;
                 function getOrt: String;
                 function getBL: String;*}
@@ -48,20 +48,11 @@ begin
      self.bundesland := data[2];
 end;    *}
 
-procedure TDatensatz.definieren (datenstring: String);
-  var p: Cardinal;
+procedure TDatensatz.definieren (user_kennz,user_ort,user_bundesland: String);
 begin
-  p := pos(';', datenstring);
-  Kennzeichen := copy(datenstring, 1, p-1);
-  delete(datenstring, 1, p);
-
-  p := pos(';', datenstring);
-  Ort := copy(datenstring, 1, p-1);
-  delete(datenstring, 1, p);
-
-  p := pos(';', datenstring);
-
-  Bundesland := datenstring
+  self.kennzeichen := user_kennz;
+  self.ort := user_ort;
+  self.bundesland := user_bundesland
 end;
 
 {*function TDatensatz.getKennz: String;

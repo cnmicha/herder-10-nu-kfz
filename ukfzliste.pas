@@ -44,6 +44,7 @@ end;
 procedure TListe.einlesen(datname:string);
 var f : TextFile;
 str : string;
+data:TStringList;
 begin
   AssignFile(f,datname);
   reset(f);
@@ -53,15 +54,20 @@ begin
   begin
     readln(f,str);
 
+    data:= NIL; //truncate array
+    data:= TStringList.Create;
+    data.Delimiter := ';';
+    data.StrictDelimiter := True; //space is not a delimiter
+    data.DelimitedText := str;
+
     liste[aktuell]:= TDatensatz.create;
-    liste[aktuell].definieren(str);
+    liste[aktuell].definieren(data[0],data[1],data[2]);
 
     INC(aktuell);
   end;
 
   CloseFile(f);
   anzahl:= aktuell;
-  aktuell:= 0;
 end;
 
 procedure TListe.einlesenFilterKennzeichen (datname,query: String);
@@ -86,7 +92,7 @@ begin
     if(AnsiContainsStr(LowerCase(data[0]), LowerCase(query))) then
     begin
       liste[aktuell]:= TDatensatz.create;
-      liste[aktuell].definieren(str);
+      liste[aktuell].definieren(data[0],data[1],data[2]);
 
       INC(aktuell);
     end;
@@ -120,7 +126,7 @@ begin
     if(AnsiContainsStr(LowerCase(data[1]), LowerCase(query))) then
     begin
       liste[aktuell]:= TDatensatz.create;
-      liste[aktuell].definieren(str);
+      liste[aktuell].definieren(data[0],data[1],data[2]);
 
       INC(aktuell);
     end;
@@ -159,7 +165,7 @@ begin
 
 
     liste[aktuell]:= TDatensatz.create;
-    liste[aktuell].definieren(str);
+    liste[aktuell].definieren(data[0],data[1],data[2]);
 
     INC(aktuell);
   end;
@@ -180,8 +186,7 @@ begin
     if LowerCase(liste[mid(up,low)].ort) > LowerCase(query) then
     begin
       ShowMessage(LowerCase(liste[mid(up,low)].ort) + ' is bigger than ' + LowerCase(query));
-//############ TODO
-// SUHL IS BIGGER THAN STRAUSBERG?!
+
       up:=mid(up,low);
       if up-low = 1 then dec(up);
     end
@@ -229,7 +234,7 @@ begin
     if(AnsiContainsStr(LowerCase(data[2]), LowerCase(query))) then
     begin
       liste[aktuell]:= TDatensatz.create;
-      liste[aktuell].definieren(str);
+      liste[aktuell].definieren(data[0],data[1],data[2]);
 
       INC(aktuell);
     end;

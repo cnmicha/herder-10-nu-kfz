@@ -92,7 +92,7 @@ begin
      liste:= TListe.create;
      liste.einlesenFilterOrtIntelli('kfz.csv', lbSucheOrt.Text);
 
-     display(lstKennz, lbAnzahl, liste);
+     //display(lstKennz, lbAnzahl, liste);
 end;
 
 procedure TForm1.display(listbox: TListBox; anzLabel: TLabel; liste: TListe);
