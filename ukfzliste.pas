@@ -178,8 +178,15 @@ begin
 
   while not (LowerCase(liste[mid(up,low)].ort) = LowerCase(query)) do
   begin
-    ShowMessage('###');
+        ShowMessage('###');
     ShowMessage(IntToStr(low) + '|' + IntToStr(up));
+
+    if up-low = 0 then
+    begin
+      ShowMessage('str not found');
+      exit;
+    end;
+
     ShowMessage('get:' + IntToStr(mid(up,low)) + ' ' + LowerCase(liste[mid(up,low)].ort));
 
 
