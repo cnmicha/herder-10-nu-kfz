@@ -10,7 +10,7 @@ object Form1: TForm1
   object bnLesen: TButton
     Left = 417
     Height = 25
-    Top = 30
+    Top = 32
     Width = 75
     Caption = 'Datei lesen'
     OnClick = bnLesenClick
@@ -19,7 +19,7 @@ object Form1: TForm1
   object lstKennz: TListBox
     Left = 24
     Height = 328
-    Top = 40
+    Top = 32
     Width = 376
     ItemHeight = 0
     TabOrder = 1
@@ -61,31 +61,56 @@ object Form1: TForm1
     Width = 160
     TabOrder = 4
   end
-  object bnSucheKennz: TButton
+  object bnFilterKennz: TButton
     Left = 192
     Height = 25
     Top = 384
     Width = 144
-    Caption = 'Suche nach Kennzeichen'
-    OnClick = bnSucheKennzClick
+    Caption = 'Filter nach Kennzeichen'
+    OnClick = bnFilterKennzClick
     TabOrder = 5
   end
-  object bnSucheOrt: TButton
+  object bnFilterOrt: TButton
     Left = 192
     Height = 25
     Top = 416
     Width = 144
-    Caption = 'Suche nach Ort'
-    OnClick = bnSucheOrtClick
+    Caption = 'Filter nach Ort'
+    OnClick = bnFilterOrtClick
     TabOrder = 6
   end
-  object bnSucheBundesland: TButton
+  object bnFilterBundesland: TButton
     Left = 192
     Height = 25
     Top = 448
     Width = 144
-    Caption = 'Suche nach Bundesland'
-    OnClick = bnSucheBundeslandClick
+    Caption = 'Filter nach Bundesland'
+    OnClick = bnFilterBundeslandClick
     TabOrder = 7
+  end
+  object lbIndex: TEdit
+    Left = 416
+    Height = 23
+    Top = 104
+    Width = 40
+    TabOrder = 8
+  end
+  object bnIndex: TButton
+    Left = 460
+    Height = 21
+    Top = 104
+    Width = 32
+    Caption = '#'
+    OnClick = bnIndexClick
+    TabOrder = 9
+  end
+  object bnFilterOrtIntelli: TButton
+    Left = 344
+    Height = 26
+    Top = 416
+    Width = 64
+    Caption = 'Intelli'
+    OnClick = bnFilterOrtIntelliClick
+    TabOrder = 10
   end
 end

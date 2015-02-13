@@ -26,37 +26,37 @@ object Form1: TForm1
   end
   object Label1: TLabel
     Left = 29
-    Height = 13
+    Height = 15
     Top = 15
-    Width = 151
+    Width = 164
     Caption = 'Kennzeichen | Ort | Bundesland'
     ParentColor = False
   end
   object lbAnzahl: TLabel
     Left = 417
-    Height = 13
+    Height = 15
     Top = 64
-    Width = 49
+    Width = 52
     Caption = 'Gesamt: 0'
     ParentColor = False
   end
   object lbSucheKennz: TEdit
     Left = 24
-    Height = 21
+    Height = 23
     Top = 384
     Width = 160
     TabOrder = 2
   end
   object lbSucheOrt: TEdit
     Left = 24
-    Height = 21
+    Height = 23
     Top = 416
     Width = 160
     TabOrder = 3
   end
   object lbSucheBundesland: TEdit
     Left = 24
-    Height = 21
+    Height = 23
     Top = 448
     Width = 160
     TabOrder = 4
@@ -90,7 +90,7 @@ object Form1: TForm1
   end
   object lbIndex: TEdit
     Left = 416
-    Height = 21
+    Height = 23
     Top = 104
     Width = 40
     TabOrder = 8
@@ -103,5 +103,14 @@ object Form1: TForm1
     Caption = '#'
     OnClick = bnIndexClick
     TabOrder = 9
+  end
+  object bnFilterOrtIntelli: TButton
+    Left = 344
+    Height = 26
+    Top = 416
+    Width = 64
+    Caption = 'Intelli'
+    OnClick = bnFilterOrtIntelliClick
+    TabOrder = 10
   end
 end

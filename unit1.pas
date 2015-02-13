@@ -18,6 +18,7 @@ type
     bnFilterKennz: TButton;
     bnFilterOrt: TButton;
     bnFilterBundesland: TButton;
+    bnFilterOrtIntelli: TButton;
     lbIndex: TEdit;
     lbSucheKennz: TEdit;
     lbSucheOrt: TEdit;
@@ -29,6 +30,7 @@ type
     procedure bnLesenClick(Sender: TObject);
     procedure bnFilterBundeslandClick(Sender: TObject);
     procedure bnFilterOrtClick(Sender: TObject);
+    procedure bnFilterOrtIntelliClick(Sender: TObject);
     procedure display(listbox: TListBox; anzLabel: TLabel; liste: TListe);
     procedure displayIndex(listbox: TListBox; anzLabel: TLabel; liste: TListe; index: CARDINAL);
     procedure bnFilterKennzClick(Sender: TObject);
@@ -84,6 +86,15 @@ begin
      display(lstKennz, lbAnzahl, liste);
 end;
 
+procedure TForm1.bnFilterOrtIntelliClick(Sender: TObject);
+var liste: TListe;
+begin
+     liste:= TListe.create;
+     liste.einlesenFilterOrtIntelli('kfz.csv', lbSucheOrt.Text);
+
+     display(lstKennz, lbAnzahl, liste);
+end;
+
 procedure TForm1.display(listbox: TListBox; anzLabel: TLabel; liste: TListe);
 var i: CARDINAL;
 begin
@@ -93,7 +104,7 @@ begin
      begin
        for i:= 0 to liste.getAnz-1 do
        begin
-         listbox.Items.Add(liste.getKennzeichen(i) + ' | ' + liste.getOrt(i) + ' | ' + liste.getBundesland(i));
+         listbox.Items.Add(IntToStr(i) + ' | ' + liste.getKennzeichen(i) + ' | ' + liste.getOrt(i) + ' | ' + liste.getBundesland(i));
        end;
      end;
 

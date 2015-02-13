@@ -4,7 +4,7 @@ unit uKfzListe;
 
 interface
 uses
-  Classes, SysUtils, strutils, uDatensatz;
+  Classes, SysUtils, strutils, uDatensatz, Dialogs;
 
 const maxAnz= 600;
 
@@ -17,9 +17,10 @@ TYPE TListe = class
                       constructor create;
                       destructor destroy;
                       procedure einlesen (datname: String);
-                      procedure einlesenSucheKennzeichen (datname,query: String);
-                      procedure einlesenSucheOrt (datname,query: String);
-                      procedure einlesenSucheBundesland (datname,query: String);
+                      procedure einlesenFilterKennzeichen (datname,query: String);
+                      procedure einlesenFilterOrt (datname,query: String);
+                      procedure einlesenFilterOrtIntelli (datname,query: String);
+                      procedure einlesenFilterBundesland (datname,query: String);
                       function getAnz():CARDINAL;
                       function getKennzeichen(Itemindex:CARDINAL):STRING;
                       function getOrt(ItemIndex:CARDINAL):STRING;
@@ -63,7 +64,7 @@ begin
   aktuell:= 0;
 end;
 
-procedure TListe.einlesenSucheKennzeichen (datname,query: String);
+procedure TListe.einlesenFilterKennzeichen (datname,query: String);
 var f : TextFile;
 str : string;
 data:TStringList;
@@ -97,7 +98,7 @@ begin
 
 end;
 
-procedure TListe.einlesenSucheOrt (datname,query: String);
+procedure TListe.einlesenFilterOrt (datname,query: String);
 var f : TextFile;
 str : string;
 var data:TStringList;
@@ -131,7 +132,81 @@ begin
 
 end;
 
-procedure TListe.einlesenSucheBundesland (datname,query: String);
+procedure TListe.einlesenFilterOrtIntelli (datname,query: String);
+function mid(u,d:cardinal):CARDINAL;
+begin
+  result:=Round((u+d)/2);
+end;
+
+var f : TextFile;
+str : string;
+low, up, splitCount : cardinal;
+var data:TStringList;
+begin
+  AssignFile(f,datname);
+  reset(f);
+  aktuell:=0;
+
+  while not EOF (f) do
+  begin
+    readln(f,str);
+
+    data:= NIL; //truncate array
+    data:= TStringList.Create;
+    data.Delimiter := ';';
+    data.StrictDelimiter := True; //space is not a delimiter
+    data.DelimitedText := str;
+
+
+    liste[aktuell]:= TDatensatz.create;
+    liste[aktuell].definieren(str);
+
+    INC(aktuell);
+  end;
+
+  CloseFile(f);
+
+  low := 0;
+  up := aktuell-1; //max anzahl
+  splitCount:=1;
+
+  while not (LowerCase(liste[mid(up,low)].ort) = LowerCase(query)) do
+  begin
+    ShowMessage('###');
+    ShowMessage(IntToStr(low) + '|' + IntToStr(up));
+    ShowMessage('get:' + IntToStr(mid(up,low)) + ' ' + LowerCase(liste[mid(up,low)].ort));
+
+
+    if LowerCase(liste[mid(up,low)].ort) > LowerCase(query) then
+    begin
+      ShowMessage(LowerCase(liste[mid(up,low)].ort) + ' is bigger than ' + LowerCase(query));
+
+      up:=mid(up,low);
+      if up-low = 1 then dec(up);
+    end
+    else
+    begin
+      ShowMessage(LowerCase(liste[mid(up,low)].ort) + ' is smaller than ' + LowerCase(query));
+
+      low:=mid(up,low);
+      if up-low = 1 then inc(up);
+
+    end;
+
+    inc(splitCount);
+  end;
+
+  ShowMessage('###');
+  ShowMessage(IntToStr(low) + '|' + IntToStr(up));
+  ShowMessage('get:' + IntToStr(mid(up,low)) + ' ' + LowerCase(liste[mid(up,low)].ort));
+  ShowMessage('finished using ' + IntToStr(splitCount) + ' splits');
+
+  anzahl:= 1;
+  aktuell:= 0;
+
+end;
+
+procedure TListe.einlesenFilterBundesland (datname,query: String);
 var f : TextFile;
 str : string;
 var data:TStringList;
