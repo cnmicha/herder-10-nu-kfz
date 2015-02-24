@@ -18,21 +18,20 @@ type
     bnFilterKennz: TButton;
     bnFilterOrt: TButton;
     bnFilterBundesland: TButton;
-    bnFilterOrtIntelli: TButton;
+    bnFilterOrtBinaer: TButton;
     lbIndex: TEdit;
     lbSucheKennz: TEdit;
     lbSucheOrt: TEdit;
     lbSucheBundesland: TEdit;
-    Label1: TLabel;
     lbAnzahl: TLabel;
-    lstKennz: TListBox;
+    dgvKfz: TStringGrid;
     procedure bnIndexClick(Sender: TObject);
     procedure bnLesenClick(Sender: TObject);
     procedure bnFilterBundeslandClick(Sender: TObject);
     procedure bnFilterOrtClick(Sender: TObject);
-    procedure bnFilterOrtIntelliClick(Sender: TObject);
-    procedure display(listbox: TListBox; anzLabel: TLabel; liste: TListe);
-    procedure displayIndex(listbox: TListBox; anzLabel: TLabel; liste: TListe; index: CARDINAL);
+    procedure bnFilterOrtBinaerClick(Sender: TObject);
+    procedure display(dgv: TStringGrid; anzLabel: TLabel; liste: TListe);
+    procedure displayIndex(dgv: TStringGrid; anzLabel: TLabel; liste: TListe; index: CARDINAL);
     procedure bnFilterKennzClick(Sender: TObject);
   private
     { private declarations }
@@ -56,7 +55,7 @@ begin
      liste:= TListe.create;
      liste.einlesen('kfz.csv');
 
-     display(lstKennz, lbAnzahl, liste);
+     display(dgvKfz, lbAnzahl, liste);
 end;
 
 procedure TForm1.bnIndexClick(Sender: TObject);
@@ -65,7 +64,7 @@ begin
      liste:= TListe.create;
      liste.einlesen('kfz.csv');
 
-     displayIndex(lstKennz, lbAnzahl, liste, StrToInt(lbIndex.Text));
+     displayIndex(dgvKfz, lbAnzahl, liste, StrToInt(lbIndex.Text));
 end;
 
 procedure TForm1.bnFilterBundeslandClick(Sender: TObject);
@@ -74,7 +73,7 @@ begin
      liste:= TListe.create;
      liste.einlesenFilterBundesland('kfz.csv', lbSucheBundesland.text);
 
-     display(lstKennz, lbAnzahl, liste);
+     display(dgvKfz, lbAnzahl, liste);
 end;
 
 procedure TForm1.bnFilterOrtClick(Sender: TObject);
@@ -83,39 +82,45 @@ begin
      liste:= TListe.create;
      liste.einlesenFilterOrt('kfz.csv', lbSucheOrt.Text);
 
-     display(lstKennz, lbAnzahl, liste);
+     display(dgvKfz, lbAnzahl, liste);
 end;
 
-procedure TForm1.bnFilterOrtIntelliClick(Sender: TObject);
+procedure TForm1.bnFilterOrtBinaerClick(Sender: TObject);
 var liste: TListe;
 begin
      liste:= TListe.create;
-     liste.einlesenFilterOrtIntelli('kfz.csv', lbSucheOrt.Text);
+     liste.einlesenFilterOrtBinaer('kfz.csv', lbSucheOrt.Text);
 
      //display(lstKennz, lbAnzahl, liste);
 end;
 
-procedure TForm1.display(listbox: TListBox; anzLabel: TLabel; liste: TListe);
+procedure TForm1.display(dgv: TStringGrid; anzLabel: TLabel; liste: TListe);
 var i: CARDINAL;
 begin
-     listbox.items.Clear;
+
+     for i := 1 to dgv.RowCount - 1 do //clear rows
+     dgv.DeleteRow(1);
 
      if(liste.getAnz > 0) then
      begin
        for i:= 0 to liste.getAnz-1 do
        begin
-         listbox.Items.Add(IntToStr(i) + ' | ' + liste.getKennzeichen(i) + ' | ' + liste.getOrt(i) + ' | ' + liste.getBundesland(i));
+         //add row
+         dgv.InsertRowWithValues(i+1, [IntToStr(i), liste.getKennzeichen(i), liste.getOrt(i), liste.getBundesland(i)]);
        end;
      end;
 
      anzLabel.caption:= 'Gesamt: ' + intToStr(liste.getAnz);
 end;
 
-procedure TForm1.displayIndex(listbox: TListBox; anzLabel: TLabel; liste: TListe; index: CARDINAL);
+procedure TForm1.displayIndex(dgv: TStringGrid; anzLabel: TLabel; liste: TListe; index: CARDINAL);
 var i: CARDINAL;
 begin
-     listbox.items.Clear;
-     listbox.Items.Add(liste.getKennzeichen(index) + ' | ' + liste.getOrt(index) + ' | ' + liste.getBundesland(index));
+     for i := 1 to dgv.RowCount - 1 do //clear rows
+     dgv.DeleteRow(1);
+
+     //add row
+     dgv.InsertRowWithValues(1, [IntToStr(index),liste.getKennzeichen(index), liste.getOrt(index), liste.getBundesland(index)]);
 
      anzLabel.caption:= 'Gesamt: 1';
 end;
@@ -127,7 +132,7 @@ begin
      liste:= TListe.create;
      liste.einlesenFilterKennzeichen('kfz.csv', lbSucheKennz.text);
 
-     display(lstKennz, lbAnzahl, liste);
+     display(dgvKfz, lbAnzahl, liste);
 end;
 
 end.

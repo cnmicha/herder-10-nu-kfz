@@ -6,20 +6,19 @@ interface
 uses
   Classes, SysUtils, strutils, uDatensatz, Dialogs;
 
-const maxAnz= 600;
+const maxAnz= 600; //array length
 
 TYPE TListe = class
                 private
                        liste: ARRAY [0..maxAnz-1] OF TDatensatz;
                        anzahl: CARDINAL;
-                       aktuell: CARDINAL;
                 public
                       constructor create;
                       destructor destroy;
                       procedure einlesen (datname: String);
                       procedure einlesenFilterKennzeichen (datname,query: String);
                       procedure einlesenFilterOrt (datname,query: String);
-                      procedure einlesenFilterOrtIntelli (datname,query: String);
+                      procedure einlesenFilterOrtBinaer (datname,query: String);
                       procedure einlesenFilterBundesland (datname,query: String);
                       function getAnz():CARDINAL;
                       function getKennzeichen(Itemindex:CARDINAL):STRING;
@@ -43,11 +42,12 @@ end;
 
 procedure TListe.einlesen(datname:string);
 var f : TextFile;
+aktuell: CARDINAL;
 str : string;
 data:TStringList;
 begin
   AssignFile(f,datname);
-  reset(f);
+  reset(f); //lock file
   aktuell:=0;
 
   while not EOF (f) do
@@ -72,6 +72,7 @@ end;
 
 procedure TListe.einlesenFilterKennzeichen (datname,query: String);
 var f : TextFile;
+aktuell: CARDINAL;
 str : string;
 data:TStringList;
 begin
@@ -106,6 +107,7 @@ end;
 
 procedure TListe.einlesenFilterOrt (datname,query: String);
 var f : TextFile;
+aktuell: CARDINAL;
 str : string;
 var data:TStringList;
 begin
@@ -138,13 +140,14 @@ begin
 
 end;
 
-procedure TListe.einlesenFilterOrtIntelli (datname,query: String);
+procedure TListe.einlesenFilterOrtBinaer (datname,query: String);
 function mid(u,d:cardinal):CARDINAL;
 begin
-  result:=Round((u+d)/2);
+  result:=Round((u+d)/2); //returns upper mid value
 end;
 
 var f : TextFile;
+aktuell: CARDINAL;
 str : string;
 low, up, splitCount : cardinal;
 var data:TStringList;
@@ -165,7 +168,7 @@ begin
 
 
     liste[aktuell]:= TDatensatz.create;
-    liste[aktuell].definieren(data[0],data[1],data[2]);
+    liste[aktuell].definieren(data[0],data[1],data[2]); //set instance vars
 
     INC(aktuell);
   end;
@@ -178,8 +181,8 @@ begin
 
   while not (LowerCase(liste[mid(up,low)].ort) = LowerCase(query)) do
   begin
-        ShowMessage('###');
-    ShowMessage(IntToStr(low) + '|' + IntToStr(up));
+    //ShowMessage('###');
+    //ShowMessage(IntToStr(low) + '|' + IntToStr(up));
 
     if up-low = 0 then
     begin
@@ -187,19 +190,19 @@ begin
       exit;
     end;
 
-    ShowMessage('get:' + IntToStr(mid(up,low)) + ' ' + LowerCase(liste[mid(up,low)].ort));
+    //ShowMessage('get:' + IntToStr(mid(up,low)) + ' ' + LowerCase(liste[mid(up,low)].ort));
 
 
     if LowerCase(liste[mid(up,low)].ort) > LowerCase(query) then
     begin
-      ShowMessage(LowerCase(liste[mid(up,low)].ort) + ' is bigger than ' + LowerCase(query));
+      //ShowMessage(LowerCase(liste[mid(up,low)].ort) + ' is bigger than ' + LowerCase(query));
 
       up:=mid(up,low);
       if up-low = 1 then dec(up);
     end
     else
     begin
-      ShowMessage(LowerCase(liste[mid(up,low)].ort) + ' is smaller than ' + LowerCase(query));
+      //ShowMessage(LowerCase(liste[mid(up,low)].ort) + ' is smaller than ' + LowerCase(query));
 
       low:=mid(up,low);
       if up-low = 1 then inc(up);
@@ -209,10 +212,10 @@ begin
     inc(splitCount);
   end;
 
-  ShowMessage('###');
-  ShowMessage(IntToStr(low) + '|' + IntToStr(up));
-  ShowMessage('get:' + IntToStr(mid(up,low)) + ' ' + LowerCase(liste[mid(up,low)].ort));
-  ShowMessage('finished using ' + IntToStr(splitCount) + ' splits');
+  //ShowMessage('###');
+  //ShowMessage(IntToStr(low) + '|' + IntToStr(up));
+  //ShowMessage('get:' + IntToStr(mid(up,low)) + ' ' + LowerCase(liste[mid(up,low)].ort));
+  ShowMessage('found string "' + query + '" using ' + IntToStr(splitCount) + ' splits');
 
   anzahl:= 1;
   aktuell:= 0;
@@ -221,6 +224,7 @@ end;
 
 procedure TListe.einlesenFilterBundesland (datname,query: String);
 var f : TextFile;
+aktuell: CARDINAL;
 str : string;
 var data:TStringList;
 begin
