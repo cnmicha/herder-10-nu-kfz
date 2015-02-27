@@ -1,22 +1,22 @@
-AC;Aachen;Nordrhein-Westfalen
-AA;Aalen Ostalbkreis;Baden-Württemberg
+ï»¿AC;Aachen;Nordrhein-Westfalen
+AA;Aalen Ostalbkreis;Baden-WÃ¼rttemberg
 AIC;Aichach-Friedberg;Bayern
-UL;Alb-Donau-Kreis und Ulm;Baden-Württemberg
-ABG;Altenburg;Thüringen
+UL;Alb-Donau-Kreis und Ulm;Baden-WÃ¼rttemberg
+ABG;Altenburg;ThÃ¼ringen
 AK;Altenkirchen/Westerwald;Rheinland-Pfalz
 AT;Altentreptow;Mecklenburg-Vorpommern
-AOE;Altötting;Bayern
+AOE;AltÃ¶tting;Bayern
 AZ;Alzey-Worms;Rheinland-Pfalz
 AM;Amberg;Bayern
 AS;Amberg-Sulzbach;Bayern
 WST;Ammerland in Westerstede;Niedersachsen
-ANG;Angermünde;Brandenburg
+ANG;AngermÃ¼nde;Brandenburg
 ANK;Anklam;Mecklenburg-Vorpommern
 ANA;Annaberg;Sachsen
 AN;Ansbach;Bayern
-APD;Apolda;Thüringen
-ARN;Arnstadt;Thüringen
-ART;Artern;Thüringen
+APD;Apolda;ThÃ¼ringen
+ARN;Arnstadt;ThÃ¼ringen
+ART;Artern;ThÃ¼ringen
 AB;Aschaffenburg;Bayern
 ASL;Aschersleben;Sachsen-Anhalt
 AU;Aue;Sachsen
@@ -24,19 +24,19 @@ AE;Auerbach;Sachsen
 A;Augsburg;Bayern
 AUR;Aurich;Niedersachsen
 DBR;Bad Doberan;Mecklenburg-Vorpommern
-DÜW;Bad Dürkheim in Neustadt/Weinstrasse;Rheinland-Pfalz
+DÃœW;Bad DÃ¼rkheim in Neustadt/Weinstrasse;Rheinland-Pfalz
 FRW;Bad Freienwalde;Brandenburg
 HEF;Bad Hersfeld-Rotenburg;Hessen
 KG;Bad Kissingen;Bayern
 KH;Bad Kreuznach;Rheinland-Pfalz
-LSZ;Bad Langensalza;Thüringen
+LSZ;Bad Langensalza;ThÃ¼ringen
 LIB;Bad Liebenwerda;Brandenburg
 AW;Bad Neuenahr-Ahrweiler;Rheinland-Pfalz
-SLZ;Bad Salzungen;Thüringen
+SLZ;Bad Salzungen;ThÃ¼ringen
 SE;Bad Segeberg;Schleswig-Holstein
-TÖL;Bad Tölz-Wolfratshausen;Bayern
-BAD;Baden-Baden;Baden-Württemberg
-BWL;Baden-Württemberg Landesregierung und Landtag;Regierung
+TÃ–L;Bad TÃ¶lz-Wolfratshausen;Bayern
+BAD;Baden-Baden;Baden-WÃ¼rttemberg
+BWL;Baden-WÃ¼rttemberg Landesregierung und Landtag;Regierung
 BA;Bamberg;Bayern
 BAR;Barnim;Brandenburg
 BZ;Bautzen;Sachsen
@@ -50,15 +50,15 @@ B;Berlin;Berlin
 BER;Bernau bei Berlin;Brandenburg
 BBG;Bernburg;Sachsen-Anhalt
 WIL;Bernkastel-Wittlich/Mosel;Rheinland-Pfalz
-BC;Biberach/Riss;Baden-Württemberg
+BC;Biberach/Riss;Baden-WÃ¼rttemberg
 BI;Bielefeld;Nordrhein-Westfalen
 BIR;Birkenfeld/Nahe und Idar-Oberstein;Rheinland-Pfalz
 BIW;Bischofswerda;Sachsen
-BIT;Bitburg-Prüm;Rheinland-Pfalz
+BIT;Bitburg-PrÃ¼m;Rheinland-Pfalz
 BTF;Bitterfeld;Sachsen-Anhalt
-BB;Böblingen;Baden-Württemberg
+BB;BÃ¶blingen;Baden-WÃ¼rttemberg
 BO;Bochum;Nordrhein-Westfalen
-FN;Bodenseekreis in Friedrichshafen;Baden-Württemberg
+FN;Bodenseekreis in Friedrichshafen;Baden-WÃ¼rttemberg
 BN;Bonn;Nordrhein-Westfalen
 BOR;Borken in Ahaus;Nordrhein-Westfalen
 BNA;Borna;Sachsen
@@ -68,19 +68,19 @@ BRB;Brandenburg;Brandenburg
 BS;Braunschweig;Niedersachsen
 BW;Bundes-Wasser- und Schiffahrtsverwaltung;BUND
 Y;Bundeswehr;BUND
-X;Bundeswehr für NATO-Hauptquartiere;BUND
+X;Bundeswehr fÃ¼r NATO-Hauptquartiere;BUND
 BRG;Burg;Sachsen-Anhalt
-BÜS;Büsingen am Hochrhein;Baden-Württemberg
-BÜZ;Bützow;Mecklenburg-Vorpommern
+BÃœS;BÃ¼singen am Hochrhein;Baden-WÃ¼rttemberg
+BÃœZ;BÃ¼tzow;Mecklenburg-Vorpommern
 CA;Calau;Brandenburg
-CW;Calw;Baden-Württemberg
+CW;Calw;Baden-WÃ¼rttemberg
 CE;Celle;Niedersachsen
 CHA;Cham/Oberpfalz;Bayern
 C;Chemnitz;Sachsen
 CLP;Cloppenburg;Niedersachsen
 CO;Coburg;Bayern
 COC;Cochem-Zell/Mosel;Rheinland-Pfalz
-COE;Cösfeld/Westfalen;Nordrhein-Westfalen
+COE;CÃ¶sfeld/Westfalen;Nordrhein-Westfalen
 CB;Cottbus;Brandenburg
 CUX;Cuxhaven;Niedersachsen
 DAH;Dachau;Bayern
@@ -98,85 +98,85 @@ DLG;Dillingen/Donau;Bayern
 DGF;Dingolfing-Landau;Bayern
 DW;Dippoldiswalde;Sachsen
 HEI;Dithmarschen in Heide/Holstein;Schleswig-Holstein
-DL;Döbeln;Sachsen
-DON;Donau-Ries in Donauwörth;Bayern
+DL;DÃ¶beln;Sachsen
+DON;Donau-Ries in DonauwÃ¶rth;Bayern
 KIB;Donnersberg-Kreis in Kirchheimbolanden;Rheinland-Pfalz
 DO;Dortmund;Nordrhein-Westfalen
 DD;Dresden;Sachsen
 DU;Duisburg;Nordrhein-Westfalen
-DN;Düren;Nordrhein-Westfalen
-D;Düsseldorf;Nordrhein-Westfalen
+DN;DÃ¼ren;Nordrhein-Westfalen
+D;DÃ¼sseldorf;Nordrhein-Westfalen
 EBE;Ebersberg;Sachsen
 EW;Eberswalde;Brandenburg
-EI;Eichstätt;Bayern
+EI;EichstÃ¤tt;Bayern
 EB;Eilenburg;Sachsen
-ESA;Eisenach;Thüringen
-EIS;Eisenberg;Thüringen
-EH;Eisenhüttenstadt;Brandenburg
+ESA;Eisenach;ThÃ¼ringen
+EIS;Eisenberg;ThÃ¼ringen
+EH;EisenhÃ¼ttenstadt;Brandenburg
 EIL;Eisleben;Sachsen-Anhalt
 EE;Elbe-Elster;Brandenburg
 EMD;Emden;Niedersachsen
-EM;Emmendingen;Baden-Württemberg
+EM;Emmendingen;Baden-WÃ¼rttemberg
 EL;Emsland in Meppen;Niedersachsen
 EN;Ennepe-Ruhr-Kreis in Schwelm;Nordrhein-Westfalen
-PF;Enzkreis und Pforzheim;Baden-Württemberg
+PF;Enzkreis und Pforzheim;Baden-WÃ¼rttemberg
 ED;Erding;Bayern
 BM;Erftkreis in Bergheim;Nordrhein-Westfalen
-EF;Erfurt;Thüringen
-ERH;Erlangen-Höchstadt;Bayern
+EF;Erfurt;ThÃ¼ringen
+ERH;Erlangen-HÃ¶chstadt;Bayern
 ER;Erlangen/Stadt;Bayern
 E;Essen;Nordrhein-Westfalen
-ES;Esslingen/Neckar;Baden-Württemberg
+ES;Esslingen/Neckar;Baden-WÃ¼rttemberg
 EU;Euskirchen;Nordrhein-Westfalen
 FI;Finsterwalde;Brandenburg
 FL;Flensburg;Schleswig-Holstein
-FLÖ;Flöha;Sachsen
+FLÃ–;FlÃ¶ha;Sachsen
 FO;Forchheim;Bayern
 FOR;Forst;Brandenburg
 FT;Frankenthal/Pfalz;Rheinland-Pfalz
 F;Frankfurt/Main;Hessen
 FF;Frankfurt/Oder;Brandenburg
 FG;Freiberg/Sachsen;Sachsen
-FR;Freiburg/Breisgau;Baden-Württemberg
+FR;Freiburg/Breisgau;Baden-WÃ¼rttemberg
 FS;Freising;Bayern
 FTL;Freital;Sachsen
-FDS;Freudenstadt;Baden-Württemberg
+FDS;Freudenstadt;Baden-WÃ¼rttemberg
 FRG;Freyung-Grafenau;Bayern
 FRI;Friesland in Jever;Niedersachsen
 FD;Fulda;Hessen
-FFB;Fürstenfeldbruck;Bayern
-FW;Fürstenwalde;Brandenburg
-FÜ;Fürth;Bayern
+FFB;FÃ¼rstenfeldbruck;Bayern
+FW;FÃ¼rstenwalde;Brandenburg
+FÃœ;FÃ¼rth;Bayern
 GDB;Gadebusch;Mecklenburg-Vorpommern
 GA;Gardelegen;Sachsen-Anhalt
 GAP;Garmisch-Partenkirchen;Bayern
 GHA;Geithain;Sachsen
 GE;Gelsenkirchen;Nordrhein-Westfalen
 GNT;Genthin;Sachsen-Anhalt
-G;Gera;Thüringen
+G;Gera;ThÃ¼ringen
 GER;Germersheim;Rheinland-Pfalz
 GI;Giessen;Hessen
 GF;Gifhorn;Niedersachsen
 GC;Glauchau;Sachsen
-GP;Göppingen;Baden-Württemberg
-GR;Görlitz;Sachsen
+GP;GÃ¶ppingen;Baden-WÃ¼rttemberg
+GR;GÃ¶rlitz;Sachsen
 GS;Goslar;Niedersachsen
-GTH;Gotha;Thüringen
-GÖ;Göttingen;Niedersachsen
-GHC;Gräfenhainichen;Sachsen-Anhalt
+GTH;Gotha;ThÃ¼ringen
+GÃ–;GÃ¶ttingen;Niedersachsen
+GHC;GrÃ¤fenhainichen;Sachsen-Anhalt
 NOH;Grafschaft Bentheim in Nordhorn;Niedersachsen
 GRS;Gransee;Brandenburg
 GW;Greifswald/Landkreis;Mecklenburg-Vorpommern
-GRZ;Greiz;Thüringen
-GVM;Grevesmühlen;Mecklenburg-Vorpommern
+GRZ;Greiz;ThÃ¼ringen
+GVM;GrevesmÃ¼hlen;Mecklenburg-Vorpommern
 GRM;Grimma;Sachsen
 GMN;Grimmen;Mecklenburg-Vorpommern
 GG;Gross-Gerau;Hessen
 GRH;Grossenhain;Sachsen
 GUB;Guben;Brandenburg
-GZ;Günzburg;Bayern
-GÜ;Güstrow;Mecklenburg-Vorpommern
-GT;Gütersloh in Rheda-Wiedenbrück;Nordrhein-Westfalen
+GZ;GÃ¼nzburg;Bayern
+GÃœ;GÃ¼strow;Mecklenburg-Vorpommern
+GT;GÃ¼tersloh in Rheda-WiedenbrÃ¼ck;Nordrhein-Westfalen
 HA;Hagen/Westfalen;Nordrhein-Westfalen
 HGN;Hagenow;Mecklenburg-Vorpommern
 HC;Hainichen;Sachsen
@@ -190,7 +190,7 @@ H;Hannover;Niedersachsen
 HB;Hansestadt Bremen und Bremerhaven;Bremen
 HGW;Hansestadt Greifswald;Mecklenburg-Vorpommern
 HH;Hansestadt Hamburg;Hamburg
-HL;Hansestadt Lübeck;Schleswig-Holstein
+HL;Hansestadt LÃ¼beck;Schleswig-Holstein
 HRO;Hansestadt Rostock;Mecklenburg-Vorpommern
 HST;Hansestadt Stralsund;Mecklenburg-Vorpommern
 HWI;Hansestadt Wismar;Mecklenburg-Vorpommern
@@ -198,9 +198,9 @@ WL;Harburg in Winsen/Luhe;Niedersachsen
 HAS;Hassberge in Hassfurt;Bayern
 HV;Havelberg;Sachsen-Anhalt
 HVL;Havelland;Brandenburg
-HDH;Heidenheim/Brenz;Baden-Württemberg
-HN;Heilbronn/Neckar;Baden-Württemberg
-HIG;Heiligenstadt;Thüringen
+HDH;Heidenheim/Brenz;Baden-WÃ¼rttemberg
+HN;Heilbronn/Neckar;Baden-WÃ¼rttemberg
+HIG;Heiligenstadt;ThÃ¼ringen
 HS;Heinsberg;Nordrhein-Westfalen
 HE;Helmstedt;Niedersachsen
 HF;Herford in Kirchlengern;Nordrhein-Westfalen
@@ -208,39 +208,39 @@ HER;Herne;Nordrhein-Westfalen
 HZ;Herzberg;Brandenburg
 RZ;Herzogtum Lauenburg in Ratzeburg;Schleswig-Holstein
 HET;Hettstedt;Sachsen-Anhalt
-HBN;Hildburghausen;Thüringen
+HBN;Hildburghausen;ThÃ¼ringen
 HI;Hildesheim;Niedersachsen
 HSK;Hochsauerlandkreis in Meschede;Nordrhein-Westfalen
 HG;Hochtaunuskreis in Bad Homburg v.d.H.;Hessen
 HO;Hof;Bayern
-KÜN;Hohenlohe-Kreis in Künzelsau;Baden-Württemberg
-HHM;Hohenmölsen;Sachsen-Anhalt
+KÃœN;Hohenlohe-Kreis in KÃ¼nzelsau;Baden-WÃ¼rttemberg
+HHM;HohenmÃ¶lsen;Sachsen-Anhalt
 HOT;Hohenstein-Ernstthal;Sachsen
 HOL;Holzminden;Niedersachsen
-HX;Höxter;Nordrhein-Westfalen
+HX;HÃ¶xter;Nordrhein-Westfalen
 HY;Hoyerswerda;Sachsen
-IL;Ilmenau;Thüringen
+IL;Ilmenau;ThÃ¼ringen
 IN;Ingolstadt/Donau;Bayern
 IZ;Itzehoe;Schleswig-Holstein
-J;Jena;Thüringen
+J;Jena;ThÃ¼ringen
 JE;Jessen;Sachsen-Anhalt
 JB;Joeterbog;Brandenburg
 KL;Kaiserslautern;Rheinland-Pfalz
 KM;Kamenz;Sachsen
-KA;Karlsruhe;Baden-Württemberg
+KA;Karlsruhe;Baden-WÃ¼rttemberg
 KS;Kassel;Hessen
 KF;Kaufbeuren;Bayern
 KEH;Kelheim;Bayern
-KE;Kempten/Allgäu;Bayern
+KE;Kempten/AllgÃ¤u;Bayern
 KI;Kiel;Schleswig-Holstein
 KT;Kitzingen;Bayern
 KLE;Kleve;Nordrhein-Westfalen
-KLZ;Klötze;Sachsen-Anhalt
+KLZ;KlÃ¶tze;Sachsen-Anhalt
 KO;Koblenz;Rheinland-Pfalz
-K;Köln;Nordrhein-Westfalen
-KW;Königs-Wusterhausen;Brandenburg
-KN;Konstanz;Baden-Württemberg
-KÖT;Köthen;Sachsen-Anhalt
+K;KÃ¶ln;Nordrhein-Westfalen
+KW;KÃ¶nigs-Wusterhausen;Brandenburg
+KN;Konstanz;Baden-WÃ¼rttemberg
+KÃ–T;KÃ¶then;Sachsen-Anhalt
 KR;Krefeld;Nordrhein-Westfalen
 KC;Kronach;Bayern
 KU;Kulmbach;Bayern
@@ -257,32 +257,32 @@ LIF;Lichtenfels;Bayern
 LM;Limburg-Weilburg/Lahn;Hessen
 LI;Lindau/Bodensee;Bayern
 LIP;Lippe in Detmold;Nordrhein-Westfalen
-LÖB;Löbau;Sachsen
-LBS;Lobenstein;Thüringen
-LÖ;Lörrach;Baden-Württemberg
-LN;Lübben;Brandenburg
-LBZ;Lübz;Mecklenburg-Vorpommern
-DAN;Lüchow-Dannenberg;Niedersachsen
+LÃ–B;LÃ¶bau;Sachsen
+LBS;Lobenstein;ThÃ¼ringen
+LÃ–;LÃ¶rrach;Baden-WÃ¼rttemberg
+LN;LÃ¼bben;Brandenburg
+LBZ;LÃ¼bz;Mecklenburg-Vorpommern
+DAN;LÃ¼chow-Dannenberg;Niedersachsen
 LC;Luckau;Sachsen
 LUK;Luckenwalde;Brandenburg
-LB;Ludwigsburg;Baden-Württemberg
+LB;Ludwigsburg;Baden-WÃ¼rttemberg
 LU;Ludwigshafen/Rhein;Rheinland-Pfalz
 LWL;Ludwigslust;Mecklenburg-Vorpommern
-LG;Lüneburg;Niedersachsen
+LG;LÃ¼neburg;Niedersachsen
 MD;Magdeburg;Sachsen-Anhalt
 MSP;Main-Spessart-Kreis in Karlstadt;Bayern
-TBB;Main-Tauber-Kreis in Tauberbischofsheim;Baden-Württemberg
+TBB;Main-Tauber-Kreis in Tauberbischofsheim;Baden-WÃ¼rttemberg
 MTK;Main-Taunus-Kreis in Hofheim;Hessen
 MZ;Mainz-Bingen und Mainz;Rheinland-Pfalz
 MC;Malchin;Mecklenburg-Vorpommern
-MA;Mannheim;Baden-Württemberg
+MA;Mannheim;Baden-WÃ¼rttemberg
 MR;Marburg-Biedenkopf/Lahn;Hessen
 MAB;Marienberg;Sachsen
-MOL;Märkisch-Oderland;Brandenburg
-MK;Märkischer Kreis in Lüdenscheid;Nordrhein-Westfalen
+MOL;MÃ¤rkisch-Oderland;Brandenburg
+MK;MÃ¤rkischer Kreis in LÃ¼denscheid;Nordrhein-Westfalen
 MYK;Mayen-Koblenz;Rheinland-Pfalz
 MVL;Mecklenburg-Vorpommern Landesregierung und Landtag;Regierung
-MGN;Meiningen;Thüringen
+MGN;Meiningen;ThÃ¼ringen
 MEI;Meissen;Sachsen
 MM;Memmingen;Bayern
 MER;Merseburg;Sachsen-Anhalt
@@ -290,23 +290,23 @@ MZG;Merzig-Wadern;Saarland
 ME;Mettmann;Nordrhein-Westfalen
 MB;Miesbach;Bayern
 MIL;Miltenberg;Bayern
-MI;Minden-Lübbecke/Westfalen;Nordrhein-Westfalen
-MG;Mönchengladbach;Nordrhein-Westfalen
-MÜ;Mühldorf am Inn;Bayern
-MHL;Mühlhausen;Thüringen
-MH;Mülheim/Ruhr;Nordrhein-Westfalen
-M;München;Bayern
-MS;Münster/Westfalen;Nordrhein-Westfalen
+MI;Minden-LÃ¼bbecke/Westfalen;Nordrhein-Westfalen
+MG;MÃ¶nchengladbach;Nordrhein-Westfalen
+MÃœ;MÃ¼hldorf am Inn;Bayern
+MHL;MÃ¼hlhausen;ThÃ¼ringen
+MH;MÃ¼lheim/Ruhr;Nordrhein-Westfalen
+M;MÃ¼nchen;Bayern
+MS;MÃ¼nster/Westfalen;Nordrhein-Westfalen
 NAU;Nauen;Brandenburg
 NMB;Naumburg/Saale;Sachsen-Anhalt
 NEB;Nebra/Unstrut;Sachsen-Anhalt
-MOS;Neckar-Odenwald-Kreis in Mosbach;Baden-Württemberg
+MOS;Neckar-Odenwald-Kreis in Mosbach;Baden-WÃ¼rttemberg
 NU;Neu-Ulm;Bayern
 NB;Neubrandenburg;Mecklenburg-Vorpommern
 ND;Neuburg-Schrobenhausen/Donau;Bayern
-NH;Neuhaus/Rennsteig;Thüringen
+NH;Neuhaus/Rennsteig;ThÃ¼ringen
 NM;Neumarkt/Oberpfalz;Bayern
-NMS;Neumünster;Schleswig-Holstein
+NMS;NeumÃ¼nster;Schleswig-Holstein
 NK;Neunkirchen/Saar;Saarland
 NP;Neuruppin;Brandenburg
 NE;Neuss;Nordrhein-Westfalen
@@ -319,28 +319,28 @@ NL;Niedersachsen Landesregierung und Landtag;Regierung
 NI;Nienburg/Weser;Niedersachsen
 NY;Niesky;Sachsen
 NF;Nordfriesland in Husum;Schleswig-Holstein
-NDH;Nordhausen;Thüringen
+NDH;Nordhausen;ThÃ¼ringen
 NRW;Nordrhein-Westfalen Landesregierung und Landtag;Regierung
 NOM;Northeim;Niedersachsen
-N;Nürnberg;Bayern
-LAU;Nürnberger Land in Lauf/Pegnitz;Bayern
-OA;Oberallgäu in Sonthofen;Bayern
+N;NÃ¼rnberg;Bayern
+LAU;NÃ¼rnberger Land in Lauf/Pegnitz;Bayern
+OA;OberallgÃ¤u in Sonthofen;Bayern
 GM;Oberbergischer Kreis in Gummersbach;Nordrhein-Westfalen
 OB;Oberhausen/Rheinland;Nordrhein-Westfalen
 OHV;Oberhavel;Brandenburg
 OSL;Oberspreewald-Lausitz;Brandenburg
-OVL;Obervogtland in Klingenthal und Ölsnitz;Sachsen
+OVL;Obervogtland in Klingenthal und Ã–lsnitz;Sachsen
 ERB;Odenwaldkreis in Erbach;Hessen
 LOS;Oder-Spree;Brandenburg
 OF;Offenbach/Main;Hessen
 OL;Oldenburg;Niedersachsen
 OE;Olpe;Nordrhein-Westfalen
 OR;Oranienburg;Brandenburg
-OG;Ortenaukreis in Offenburg;Baden-Württemberg
+OG;Ortenaukreis in Offenburg;Baden-WÃ¼rttemberg
 OZ;Oschatz;Sachsen
 OC;Oschersleben;Sachsen-Anhalt
-OS;Osnabrück;Niedersachsen
-OAL;Ostallgäu in Marktoberdorf;Bayern
+OS;OsnabrÃ¼ck;Niedersachsen
+OAL;OstallgÃ¤u in Marktoberdorf;Bayern
 OBG;Osterburg;Sachsen-Anhalt
 OHZ;Osterholz-Scharmbeck;Niedersachsen
 OHA;Osterode/Harz;Niedersachsen
@@ -357,8 +357,8 @@ PI;Pinneberg;Schleswig-Holstein
 PS;Pirmasens;Rheinland-Pfalz
 PIR;Pirna;Sachsen
 PL;Plauen;Sachsen
-PLÖ;Plön/Holstein;Schleswig-Holstein
-PN;Pössneck;Thüringen
+PLÃ–;PlÃ¶n/Holstein;Schleswig-Holstein
+PN;PÃ¶ssneck;ThÃ¼ringen
 P;Potsdam;Brandenburg
 PM;Potsdam-Mittelmark;Brandenburg
 PZ;Prenzlau;Brandenburg
@@ -366,42 +366,42 @@ PR;Prignitz;Brandenburg
 PK;Pritzwalk;Brandenburg
 QLB;Quedlinburg;Sachsen-Anhalt
 QFT;Querfurt;Sachsen-Anhalt
-RA;Rastatt;Baden-Württemberg
+RA;Rastatt;Baden-WÃ¼rttemberg
 RN;Rathenow;Brandenburg
-RV;Ravensburg;Baden-Württemberg
+RV;Ravensburg;Baden-WÃ¼rttemberg
 RE;Recklinghausen in Marl;Nordrhein-Westfalen
 REG;Regen (Bayr. Wald) (Bay);Bayern
 R;Regensburg;Bayern
 RC;Reichenbach/Vogtland;Sachsen
-WN;Rems-Murr-Kreis in Waiblingen;Baden-Württemberg
+WN;Rems-Murr-Kreis in Waiblingen;Baden-WÃ¼rttemberg
 RS;Remscheid;Nordrhein-Westfalen
 RD;Rendsburg-Eckernfoerde;Schleswig-Holstein
-RT;Reutlingen;Baden-Württemberg
-SIM;Rhein-Hunsrück-Kreis in Simmern;Rheinland-Pfalz
+RT;Reutlingen;Baden-WÃ¼rttemberg
+SIM;Rhein-HunsrÃ¼ck-Kreis in Simmern;Rheinland-Pfalz
 EMS;Rhein-Lahn-Kreis in Bad Ems;Rheinland-Pfalz
-HD;Rhein-Neckar-Kreis und Heidelberg;Baden-Württemberg
+HD;Rhein-Neckar-Kreis und Heidelberg;Baden-WÃ¼rttemberg
 SU;Rhein-Sieg-Kreis in Siegburg;Nordrhein-Westfalen
-RÜD;Rheingau-Taunus-Kreis in Rüdesheim;Hessen
+RÃœD;Rheingau-Taunus-Kreis in RÃ¼desheim;Hessen
 GL;Rheinisch-Bergischer Kreis in Bergisch Gladbach;Nordrhein-Westfalen
 RPL;Rheinland-Pfalz Landesregierung und Landtag;Regierung
-NES;Rhön-Grabfeld in Bad Neustadt/Saale;Bayern
+NES;RhÃ¶n-Grabfeld in Bad Neustadt/Saale;Bayern
 RDG;Ribnitz-Damgarten;Mecklenburg-Vorpommern
 RIE;Riesa;Sachsen
-RM;Röbel/Müritz;Mecklenburg-Vorpommern
+RM;RÃ¶bel/MÃ¼ritz;Mecklenburg-Vorpommern
 RL;Rochlitz;Sachsen
 RO;Rosenheim;Bayern
 RSL;Rosslau/Elbe;Sachsen-Anhalt
 ROS;Rostock/Landkreis;Mecklenburg-Vorpommern
-ROW;Rotenburg/Wümme;Niedersachsen
+ROW;Rotenburg/WÃ¼mme;Niedersachsen
 RH;Roth/Rednitz;Bayern
 PAN;Rottal-Inn in Pfarrkirchen;Bayern
-RW;Rottweil;Baden-Württemberg
-RU;Rudolstadt;Thüringen
-RÜG;Rügen in Bergen;Mecklenburg-Vorpommern
-SLF;Saalfeld;Thüringen
+RW;Rottweil;Baden-WÃ¼rttemberg
+RU;Rudolstadt;ThÃ¼ringen
+RÃœG;RÃ¼gen in Bergen;Mecklenburg-Vorpommern
+SLF;Saalfeld;ThÃ¼ringen
 SK;Saalkreis in Halle;Sachsen-Anhalt
 HOM;Saar-Pfalz-Kreis in Homburg/Saar;Saarland
-SB;Saarbrücken;Saarland
+SB;SaarbrÃ¼cken;Saarland
 SAL;Saarland Landesregierung und Landtag;Regierung
 SLS;Saarlouis;Saarland
 LSN;Sachsen Landesregierung und Landtag;Regierung
@@ -410,18 +410,18 @@ SZ;Salzgitter;Niedersachsen
 SAW;Salzwedel;Sachsen-Anhalt
 SGH;Sangerhausen;Sachsen-Anhalt
 SHG;Schaumburg in Stadthagen;Niedersachsen
-SCZ;Schleiz;Thüringen
+SCZ;Schleiz;ThÃ¼ringen
 SL;Schleswig-Flensburg;Schleswig-Holstein
 SH;Schleswig-Holstein Landesregierung und Landtag;Regierung
-SM;Schmalkalden;Thüringen
-SLN;Schmölln;Thüringen
-SBK;Schönebeck/Elbe;Sachsen-Anhalt
+SM;Schmalkalden;ThÃ¼ringen
+SLN;SchmÃ¶lln;ThÃ¼ringen
+SBK;SchÃ¶nebeck/Elbe;Sachsen-Anhalt
 SC;Schwabach;Bayern
-SHA;Schwäbisch Hall;Baden-Württemberg
+SHA;SchwÃ¤bisch Hall;Baden-WÃ¼rttemberg
 HR;Schwalm-Eder-Kreis in Homberg;Hessen
 SAD;Schwandorf;Bayern
 SZB;Schwarzenberg;Sachsen
-VS;Schwarzwald-Baar-Kreis in Villingen-Schwenningen;Baden-Württemberg
+VS;Schwarzwald-Baar-Kreis in Villingen-Schwenningen;Baden-WÃ¼rttemberg
 SDT;Schwedt/Oder;Brandenburg
 SW;Schweinfurt;Bayern
 SN;Schwerin;Mecklenburg-Vorpommern
@@ -429,20 +429,20 @@ SEB;Sebnitz;Sachsen
 SEE;Seelow;Brandenburg
 SFB;Senftenberg;Brandenburg
 SI;Siegen;Nordrhein-Westfalen
-SIG;Sigmaringen;Baden-Württemberg
+SIG;Sigmaringen;Baden-WÃ¼rttemberg
 SG;Solingen;Nordrhein-Westfalen
 SFA;Soltau-Fallingbostel;Niedersachsen
-SÖM;Sömmerda;Thüringen
-SDH;Sondershausen;Thüringen
-SON;Sonneberg;Thüringen
-SO;Söst;Nordrhein-Westfalen
+SÃ–M;SÃ¶mmerda;ThÃ¼ringen
+SDH;Sondershausen;ThÃ¼ringen
+SON;Sonneberg;ThÃ¼ringen
+SO;SÃ¶st;Nordrhein-Westfalen
 SP;Speyer;Rheinland-Pfalz
 SPN;Spree-Neisse;Brandenburg
 SPB;Spremberg;Brandenburg
 IGB;St. Ingbert;Saarland
 WND;St. Wendel;Saarland
 STD;Stade;Niedersachsen
-SRO;Stadtroda;Thüringen
+SRO;Stadtroda;ThÃ¼ringen
 STA;Starnberg;Bayern
 SFT;Stassfurt;Sachsen-Anhalt
 ST;Steinfurt;Nordrhein-Westfalen
@@ -453,44 +453,44 @@ OD;Stormarn in Bad Oldesloe;Schleswig-Holstein
 SBG;Strasburg;Mecklenburg-Vorpommern
 SR;Straubing-Bogen;Bayern
 SRB;Strausberg;Brandenburg
-S;Stuttgart;Baden-Württemberg
-SÜW;Südl. Weinstrasse in Landau;Rheinland-Pfalz
-SHL;Suhl;Thüringen
-TF;Teltow-Fläming;Brandenburg
+S;Stuttgart;Baden-WÃ¼rttemberg
+SÃœW;SÃ¼dl. Weinstrasse in Landau;Rheinland-Pfalz
+SHL;Suhl;ThÃ¼ringen
+TF;Teltow-FlÃ¤ming;Brandenburg
 TP;Templin/Uckermark;Brandenburg
 TET;Teterow;Mecklenburg-Vorpommern
-THL;Thüringen Landesregierung und Landtag;Regierung
+THL;ThÃ¼ringen Landesregierung und Landtag;Regierung
 TIR;Tirschenreuth;Bayern
 TG;Torgau;Sachsen
 TS;Traunstein;Bayern
 TR;Trier-Saarburg;Rheinland-Pfalz
-TÜ;Tübingen;Baden-Württemberg
-TUT;Tuttlingen;Baden-Württemberg
+TÃœ;TÃ¼bingen;Baden-WÃ¼rttemberg
+TUT;Tuttlingen;Baden-WÃ¼rttemberg
 UM;Uckermark;Brandenburg
-UEM;Ückermünde;Mecklenburg-Vorpommern
-UE;Ülzen;Niedersachsen
+UEM;ÃœckermÃ¼nde;Mecklenburg-Vorpommern
+UE;Ãœlzen;Niedersachsen
 UN;Unna/Westfalen;Nordrhein-Westfalen
-MN;Unterallgäu in Mindelheim;Bayern
+MN;UnterallgÃ¤u in Mindelheim;Bayern
 VEC;Vechta;Niedersachsen
 VER;Verden/Aller;Niedersachsen
 VIE;Viersen;Nordrhein-Westfalen
 VB;Vogelsbergkreis in Lauterbach;Hessen
-VK;Völklingen;Saarland
+VK;VÃ¶lklingen;Saarland
 KB;Waldeck-Frankenberg in Korbach;Hessen
-WT;Waldshut-Tiengen;Baden-Württemberg
+WT;Waldshut-Tiengen;Baden-WÃ¼rttemberg
 WZL;Wanzleben;Sachsen-Anhalt
-WRN;Waren/Müritz;Mecklenburg-Vorpommern
+WRN;Waren/MÃ¼ritz;Mecklenburg-Vorpommern
 WAF;Warendorf;Nordrhein-Westfalen
 WEN;Weiden/Oberpfalz;Bayern
 WM;Weilheim-Schongau/Oberbayern;Bayern
-WE;Weimar;Thüringen
+WE;Weimar;ThÃ¼ringen
 WUG;Weissenburg-Gunzenhausen;Bayern
 WSF;Weissenfels;Sachsen-Anhalt
 WSW;Weisswasser;Sachsen
 WDA;Werdau;Sachsen
 WR;Wernigerode;Sachsen-Anhalt
 ESW;Werra-Meissner-Kreis in Eschwege;Hessen
-WES;Wesel in Mörs;Nordrhein-Westfalen
+WES;Wesel in MÃ¶rs;Nordrhein-Westfalen
 BRA;Wesermarsch in Brake;Niedersachsen
 WW;Westerwald in Montabaur;Rheinland-Pfalz
 FB;Wetteraukreis in Friedberg;Hessen
@@ -500,22 +500,22 @@ WIS;Wismar/Landkreis;Mecklenburg-Vorpommern
 WB;Wittenberg;Sachsen-Anhalt
 WTM;Wittmund;Niedersachsen
 WK;Wittstock;Brandenburg
-WF;Wolfenbüttel;Niedersachsen
+WF;WolfenbÃ¼ttel;Niedersachsen
 WOB;Wolfsburg;Niedersachsen
 WLG;Wolgast/Usedom;Mecklenburg-Vorpommern
 WMS;Wolmirstedt;Sachsen
-WBS;Worbis;Thüringen
+WBS;Worbis;ThÃ¼ringen
 WO;Worms;Rheinland-Pfalz
 WUN;Wunsiedel;Bayern
 W;Wuppertal;Nordrhein-Westfalen
-WÜ;Würzburg;Bayern
+WÃœ;WÃ¼rzburg;Bayern
 WUR;Wurzen;Sachsen
 ZZ;Zeitz;Sachsen-Anhalt
 ZE;Zerbst;Sachsen-Anhalt
-ZR;Zeulenroda;Thüringen
+ZR;Zeulenroda;ThÃ¼ringen
 ZI;Zittau;Sachsen
-BL;Zollernalbkreis in Balingen;Baden-Württemberg
+BL;Zollernalbkreis in Balingen;Baden-WÃ¼rttemberg
 ZS;Zossen;Brandenburg
 ZP;Zschopau;Sachsen
-ZW;Zweibrücken;Rheinland-Pfalz
+ZW;ZweibrÃ¼cken;Rheinland-Pfalz
 Z;Zwickau;Sachsen

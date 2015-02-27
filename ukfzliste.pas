@@ -143,7 +143,7 @@ end;
 procedure TListe.einlesenFilterOrtBinaer (datname,query: String);
 function mid(u,d:cardinal):CARDINAL;
 begin
-  result:=Round((u+d)/2); //returns upper mid value
+  result:=(u+d) div 2;
 end;
 
 var f : TextFile;
@@ -181,45 +181,31 @@ begin
 
   while not (LowerCase(liste[mid(up,low)].ort) = LowerCase(query)) do
   begin
-    //ShowMessage('###');
-    //ShowMessage(IntToStr(low) + '|' + IntToStr(up));
-
     if up-low = 0 then
     begin
       ShowMessage('str not found');
       exit;
     end;
 
-    //ShowMessage('get:' + IntToStr(mid(up,low)) + ' ' + LowerCase(liste[mid(up,low)].ort));
-
 
     if LowerCase(liste[mid(up,low)].ort) > LowerCase(query) then
     begin
-      //ShowMessage(LowerCase(liste[mid(up,low)].ort) + ' is bigger than ' + LowerCase(query));
-
       up:=mid(up,low);
       if up-low = 1 then dec(up);
     end
     else
     begin
-      //ShowMessage(LowerCase(liste[mid(up,low)].ort) + ' is smaller than ' + LowerCase(query));
-
       low:=mid(up,low);
       if up-low = 1 then inc(up);
-
     end;
 
     inc(splitCount);
   end;
 
-  //ShowMessage('###');
-  //ShowMessage(IntToStr(low) + '|' + IntToStr(up));
-  //ShowMessage('get:' + IntToStr(mid(up,low)) + ' ' + LowerCase(liste[mid(up,low)].ort));
   ShowMessage('found string "' + query + '" using ' + IntToStr(splitCount) + ' splits');
 
   anzahl:= 1;
   aktuell:= 0;
-
 end;
 
 procedure TListe.einlesenFilterBundesland (datname,query: String);
