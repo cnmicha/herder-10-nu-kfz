@@ -1,0 +1,135 @@
+object Form1: TForm1
+  Left = 1156
+  Height = 538
+  Top = 355
+  Width = 639
+  Caption = 'kfz'
+  ClientHeight = 538
+  ClientWidth = 639
+  LCLVersion = '1.0.10.0'
+  object bnLesen: TButton
+    Left = 537
+    Height = 25
+    Top = 48
+    Width = 75
+    Caption = 'Datei lesen'
+    OnClick = bnLesenClick
+    TabOrder = 0
+  end
+  object lbAnzahl: TLabel
+    Left = 537
+    Height = 22
+    Top = 80
+    Width = 68
+    Caption = 'Gesamt: 0'
+    ParentColor = False
+  end
+  object lbSucheKennz: TEdit
+    Left = 24
+    Height = 33
+    Top = 384
+    Width = 160
+    TabOrder = 1
+  end
+  object lbSucheOrt: TEdit
+    Left = 24
+    Height = 33
+    Top = 416
+    Width = 160
+    TabOrder = 2
+  end
+  object lbSucheBundesland: TEdit
+    Left = 24
+    Height = 33
+    Top = 448
+    Width = 160
+    TabOrder = 3
+  end
+  object bnFilterKennz: TButton
+    Left = 192
+    Height = 25
+    Top = 384
+    Width = 144
+    Caption = 'Filter nach Kennzeichen'
+    OnClick = bnFilterKennzClick
+    TabOrder = 4
+  end
+  object bnFilterOrt: TButton
+    Left = 192
+    Height = 25
+    Top = 416
+    Width = 144
+    Caption = 'Filter nach Ort'
+    OnClick = bnFilterOrtClick
+    TabOrder = 5
+  end
+  object bnFilterBundesland: TButton
+    Left = 192
+    Height = 25
+    Top = 448
+    Width = 144
+    Caption = 'Filter nach Bundesland'
+    OnClick = bnFilterBundeslandClick
+    TabOrder = 6
+  end
+  object lbIndex: TEdit
+    Left = 536
+    Height = 33
+    Top = 120
+    Width = 40
+    TabOrder = 7
+  end
+  object bnIndex: TButton
+    Left = 580
+    Height = 21
+    Top = 120
+    Width = 32
+    Caption = '#'
+    OnClick = bnIndexClick
+    TabOrder = 8
+  end
+  object bnFilterOrtBinaer: TButton
+    Left = 344
+    Height = 26
+    Top = 416
+    Width = 64
+    Caption = 'Binäre S.'
+    OnClick = bnFilterOrtBinaerClick
+    TabOrder = 9
+  end
+  object dgvKfz: TStringGrid
+    Left = 24
+    Height = 352
+    Top = 16
+    Width = 488
+    ColCount = 4
+    ColumnClickSorts = True
+    Columns = <    
+      item
+        ReadOnly = True
+        Title.Caption = 'ID'
+        Width = 50
+      end    
+      item
+        Title.Caption = 'Kennzeichen'
+        Width = 100
+      end    
+      item
+        Title.Caption = 'Ort'
+        Width = 200
+      end    
+      item
+        Title.Caption = 'Land'
+        Width = 134
+      end>
+    FixedCols = 0
+    RowCount = 1
+    TabOrder = 10
+    ColWidths = (
+      50
+      100
+      200
+      134
+    )
+  end
+end

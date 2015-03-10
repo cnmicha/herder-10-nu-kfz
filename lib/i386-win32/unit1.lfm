@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 636
+  Left = 1156
   Height = 530
-  Top = 197
+  Top = 355
   Width = 631
   Caption = 'kfz'
   ClientHeight = 530
@@ -18,29 +18,29 @@ object Form1: TForm1
   end
   object lbAnzahl: TLabel
     Left = 537
-    Height = 15
+    Height = 13
     Top = 80
-    Width = 52
+    Width = 51
     Caption = 'Gesamt: 0'
     ParentColor = False
   end
   object lbSucheKennz: TEdit
     Left = 24
-    Height = 23
+    Height = 21
     Top = 384
     Width = 160
     TabOrder = 1
   end
   object lbSucheOrt: TEdit
     Left = 24
-    Height = 23
+    Height = 21
     Top = 416
     Width = 160
     TabOrder = 2
   end
   object lbSucheBundesland: TEdit
     Left = 24
-    Height = 23
+    Height = 21
     Top = 448
     Width = 160
     TabOrder = 3
@@ -74,7 +74,7 @@ object Form1: TForm1
   end
   object lbIndex: TEdit
     Left = 536
-    Height = 23
+    Height = 21
     Top = 120
     Width = 40
     TabOrder = 7

@@ -89,13 +89,14 @@ procedure TForm1.bnFilterOrtBinaerClick(Sender: TObject);
 var liste: TListe;
 begin
      liste:= TListe.create;
-     liste.einlesenFilterOrtBinaer('kfz.csv', lbSucheOrt.Text);
+     liste.einlesen('kfz.csv');
+     ShowMessage(IntToStr(liste.binsuche(lbSucheKennz.Text)));
 
      //display(lstKennz, lbAnzahl, liste);
 end;
 
 procedure TForm1.display(dgv: TStringGrid; anzLabel: TLabel; liste: TListe);
-var i: CARDINAL;
+var i,C,newRow: CARDINAL;
 begin
 
      for i := 1 to dgv.RowCount - 1 do //clear rows
@@ -106,7 +107,13 @@ begin
        for i:= 0 to liste.getAnz-1 do
        begin
          //add row
-         dgv.InsertRowWithValues(i+1, [IntToStr(i), liste.getKennzeichen(i), liste.getOrt(i), liste.getBundesland(i)]);
+         //todo
+         //dgv.InsertRowWithValues(i+1, [IntToStr(i), liste.getKennzeichen(i), liste.getOrt(i), liste.getBundesland(i)]);
+
+         newRow := dgv.RowCount;
+         dgv.RowCount:=dgv.RowCount+1;
+
+         dgv.Cells[0, newRow] := IntToStr(i+1);
        end;
      end;
 
@@ -120,7 +127,7 @@ begin
      dgv.DeleteRow(1);
 
      //add row
-     dgv.InsertRowWithValues(1, [IntToStr(index),liste.getKennzeichen(index), liste.getOrt(index), liste.getBundesland(index)]);
+     //todo //dgv.InsertRowWithValues(1, [IntToStr(index),liste.getKennzeichen(index), liste.getOrt(index), liste.getBundesland(index)]);
 
      anzLabel.caption:= 'Gesamt: 1';
 end;

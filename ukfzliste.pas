@@ -18,7 +18,7 @@ TYPE TListe = class
                       procedure einlesen (datname: String);
                       procedure einlesenFilterKennzeichen (datname,query: String);
                       procedure einlesenFilterOrt (datname,query: String);
-                      procedure einlesenFilterOrtBinaer (datname,query: String);
+                      function binsuche (query: String):INTEGER;
                       procedure einlesenFilterBundesland (datname,query: String);
                       function getAnz():CARDINAL;
                       function getKennzeichen(Itemindex:CARDINAL):STRING;
@@ -60,8 +60,14 @@ begin
     data.StrictDelimiter := True; //space is not a delimiter
     data.DelimitedText := str;
 
+    //BEGIN insertion sort
+
+    // ...
+
     liste[aktuell]:= TDatensatz.create;
     liste[aktuell].definieren(data[0],data[1],data[2]);
+
+    //END insertion sort
 
     INC(aktuell);
   end;
@@ -140,7 +146,7 @@ begin
 
 end;
 
-procedure TListe.einlesenFilterOrtBinaer (datname,query: String);
+function TListe.binsuche (query: String):INTEGER;
 function mid(u,d:cardinal):CARDINAL;
 begin
   result:=(u+d) div 2;
@@ -150,30 +156,8 @@ var f : TextFile;
 aktuell: CARDINAL;
 str : string;
 low, up, splitCount : cardinal;
-var data:TStringList;
+
 begin
-  AssignFile(f,datname);
-  reset(f);
-  aktuell:=0;
-
-  while not EOF (f) do
-  begin
-    readln(f,str);
-
-    data:= NIL; //truncate array
-    data:= TStringList.Create;
-    data.Delimiter := ';';
-    data.StrictDelimiter := True; //space is not a delimiter
-    data.DelimitedText := str;
-
-
-    liste[aktuell]:= TDatensatz.create;
-    liste[aktuell].definieren(data[0],data[1],data[2]); //set instance vars
-
-    INC(aktuell);
-  end;
-
-  CloseFile(f);
 
   low := 0;
   up := aktuell-1; //max anzahl
