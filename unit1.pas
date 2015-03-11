@@ -103,7 +103,7 @@ end;
 
 procedure TForm1.display(dgv: TStringGrid; anzLabel: TLabel; liste: TListe);
 var
-  i, C, newRow: cardinal;
+  i, newRow: cardinal;
 begin
 
   for i := 1 to dgv.RowCount - 1 do //clear rows
@@ -114,9 +114,6 @@ begin
     for i := 0 to liste.getAnz - 1 do
     begin
       //add row
-      //todo
-      //dgv.InsertRowWithValues(i+1, [IntToStr(i), liste.getKennzeichen(i), liste.getOrt(i), liste.getBundesland(i)]);
-
       newRow := dgv.RowCount;
       dgv.RowCount := dgv.RowCount + 1;
 
@@ -139,7 +136,12 @@ begin
     dgv.DeleteRow(1);
 
   //add row
-  //todo //dgv.InsertRowWithValues(1, [IntToStr(index),liste.getKennzeichen(index), liste.getOrt(index), liste.getBundesland(index)]);
+  dgv.RowCount := dgv.RowCount + 1;
+
+  dgv.Cells[0, 1] := IntToStr(index);
+  dgv.Cells[1, 1] := liste.getKennzeichen(index-1);
+  dgv.Cells[2, 1] := liste.getOrt(index-1);
+  dgv.Cells[3, 1] := liste.getBundesland(index-1);
 
   anzLabel.Caption := 'Gesamt: 1';
 end;
