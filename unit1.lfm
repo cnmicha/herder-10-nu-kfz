@@ -6,7 +6,7 @@ object Form1: TForm1
   Caption = 'kfz'
   ClientHeight = 538
   ClientWidth = 639
-  LCLVersion = '1.2.6.0'
+  LCLVersion = '1.0.10.0'
   object bnLesen: TButton
     Left = 537
     Height = 25
@@ -18,29 +18,29 @@ object Form1: TForm1
   end
   object lbAnzahl: TLabel
     Left = 537
-    Height = 15
+    Height = 22
     Top = 80
-    Width = 52
+    Width = 68
     Caption = 'Gesamt: 0'
     ParentColor = False
   end
   object lbSucheKennz: TEdit
     Left = 24
-    Height = 23
+    Height = 33
     Top = 384
     Width = 160
     TabOrder = 1
   end
   object lbSucheOrt: TEdit
     Left = 24
-    Height = 23
+    Height = 33
     Top = 416
     Width = 160
     TabOrder = 2
   end
   object lbSucheBundesland: TEdit
     Left = 24
-    Height = 23
+    Height = 33
     Top = 448
     Width = 160
     TabOrder = 3
@@ -74,7 +74,7 @@ object Form1: TForm1
   end
   object lbIndex: TEdit
     Left = 536
-    Height = 23
+    Height = 33
     Top = 120
     Width = 40
     TabOrder = 7

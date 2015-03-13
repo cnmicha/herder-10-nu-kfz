@@ -96,7 +96,7 @@ var
 begin
   liste := TListe.Create;
   liste.einlesen('kfz.csv');
-  ShowMessage(IntToStr(liste.binsuche(lbSucheKennz.Text)));
+  ShowMessage(IntToStr(liste.KFZ_suchen(lbSucheKennz.Text)));
 
   //display(lstKennz, lbAnzahl, liste);
 end;

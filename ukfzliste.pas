@@ -21,12 +21,12 @@ type
     procedure einlesen(datname: string);
     procedure einlesenFilterKennzeichen(datname, query: string);
     procedure einlesenFilterOrt(datname, query: string);
-    function binsuche(query: string): integer;
     procedure einlesenFilterBundesland(datname, query: string);
     function getAnz(): cardinal;
     function getKennzeichen(ItemIndex: cardinal): string;
     function getOrt(ItemIndex: cardinal): string;
     function getBundesland(ItemIndex: cardinal): string;
+    function KFZ_suchen(kfz: string): integer;
   end;
 
 
@@ -168,54 +168,29 @@ begin
 
 end;
 
-function TListe.binsuche(query: string): integer;
+function TListe.KFZ_suchen(kfz: string): integer;
 
-  function mid(u, d: cardinal): cardinal;
+  function binsuche(ug, og: cardinal): integer;
+  var
+    mitte: cardinal;
   begin
-    Result := (u + d) div 2;
-  end;
-
-var
-  f: TextFile;
-  aktuell: cardinal;
-  str: string;
-  low, up, splitCount: cardinal;
-
-begin
-
-  low := 0;
-  up := aktuell - 1; //max anzahl
-  splitCount := 1;
-
-  while not (LowerCase(liste[mid(up, low)].ort) = LowerCase(query)) do
-  begin
-    if up - low = 0 then
+    if ug <= og then
     begin
-      ShowMessage('str not found');
-      exit;
-    end;
-
-
-    if LowerCase(liste[mid(up, low)].ort) > LowerCase(query) then
-    begin
-      up := mid(up, low);
-      if up - low = 1 then
-        Dec(up);
+      mitte := (ug + og) div 2;
+      //ShowMessage(liste[mitte].kennzeichen);
+      if Liste[mitte].ort > kfz then
+        Result := binsuche(ug, mitte - 1)
+      else if liste[mitte].ort < kfz then
+        Result := binsuche(mitte + 1, og)
+      else
+        Result := mitte;
     end
     else
-    begin
-      low := mid(up, low);
-      if up - low = 1 then
-        Inc(up);
-    end;
-
-    Inc(splitCount);
+      Result := -1;
   end;
 
-  ShowMessage('found string "' + query + '" using ' + IntToStr(splitCount) + ' splits');
-
-  anzahl := 1;
-  aktuell := 0;
+begin
+  Result := binsuche(0, anzahl - 1);
 end;
 
 procedure TListe.einlesenFilterBundesland(datname, query: string);

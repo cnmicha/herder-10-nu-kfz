@@ -130,7 +130,7 @@ end;
 procedure TForm1.displayIndex(dgv: TStringGrid; anzLabel: TLabel;
   liste: TListe; index: cardinal);
 var
-  i, C: cardinal;
+  i: cardinal;
 begin
   for i := 1 to dgv.RowCount - 1 do //clear rows
     dgv.DeleteRow(1);
