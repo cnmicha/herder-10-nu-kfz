@@ -48,11 +48,11 @@ begin
      self.bundesland := data[2];
 end;    *}
 
-procedure definieren (user_kennz,user_ort,user_bundesland: String);
+procedure TDatensatz.definieren (user_kennz,user_ort,user_bundesland: String);
 begin
   self.kennzeichen := user_kennz;
-  Ort := user_ort;
-  Bundesland := user_bundesland
+  self.ort := user_ort;
+  self.bundesland := user_bundesland
 end;
 
 {*function TDatensatz.getKennz: String;

@@ -35,19 +35,6 @@ begin
 
 end;
 
-    {*procedure TDatensatz.definieren(datenstring: String);
-var data:TStringList;
-begin
-     data:= TStringList.Create;
-     data.Delimiter := ';';
-     data.StrictDelimiter := True; //space is not a delimiter
-     data.DelimitedText := datenstring;
-
-     self.kennzeichen := data[0];
-     self.ort := data[1];
-     self.bundesland := data[2];
-end;    *}
-
 procedure TDatensatz.definieren (user_kennz,user_ort,user_bundesland: String);
 begin
   self.kennzeichen := user_kennz;

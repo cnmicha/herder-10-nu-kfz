@@ -7,13 +7,10 @@ interface
 uses
   Classes, SysUtils, strutils, uDatensatz, Dialogs;
 
-const
-  maxAnz = 600; //array length
-
 type
   TListe = class
   private
-    liste: array [0..maxAnz - 1] of TDatensatz;
+    liste: array of TDatensatz;
     anzahl: cardinal;
   public
     constructor Create;
@@ -26,7 +23,7 @@ type
     function getKennzeichen(ItemIndex: cardinal): string;
     function getOrt(ItemIndex: cardinal): string;
     function getBundesland(ItemIndex: cardinal): string;
-    function KFZ_suchen(kfz: string): integer;
+    function KFZ_suchen(query: string): integer;
   end;
 
 
@@ -68,6 +65,8 @@ begin
 
     //BEGIN insertion sort
 
+    SetLength(liste, length(liste) + 1);
+
     j := aktuell;
     if length(liste) > 0 then
     begin
@@ -81,6 +80,7 @@ begin
     end
     else
     begin
+      SetLength(liste, 1);
       liste[0] := TDatensatz.Create;
       liste[0].definieren(Data[0], Data[1], Data[2]);
     end;
@@ -168,7 +168,7 @@ begin
 
 end;
 
-function TListe.KFZ_suchen(kfz: string): integer;
+function TListe.KFZ_suchen(query: string): integer;
 
   function binsuche(ug, og: cardinal): integer;
   var
@@ -177,20 +177,22 @@ function TListe.KFZ_suchen(kfz: string): integer;
     if ug <= og then
     begin
       mitte := (ug + og) div 2;
-      //ShowMessage(liste[mitte].kennzeichen);
-      if Liste[mitte].ort > kfz then
+      //ShowMessage(liste[mitte].ort);
+
+      if LowerCase(Liste[mitte].ort) > LowerCase(query) then
         Result := binsuche(ug, mitte - 1)
-      else if liste[mitte].ort < kfz then
+      else if LowerCase(liste[mitte].ort) < LowerCase(query) then
         Result := binsuche(mitte + 1, og)
       else
+        ShowMessage('found ' + IntToStr(mitte));
         Result := mitte;
     end
     else
-      Result := -1;
+      Result := -1; //no matching item found
   end;
 
 begin
-  Result := binsuche(0, anzahl-1);
+  Result := binsuche(0, self.anzahl - 1);
 end;
 
 procedure TListe.einlesenFilterBundesland(datname, query: string);

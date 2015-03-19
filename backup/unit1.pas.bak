@@ -93,12 +93,20 @@ end;
 procedure TForm1.bnFilterOrtBinaerClick(Sender: TObject);
 var
   liste: TListe;
+  id: integer;
 begin
   liste := TListe.Create;
   liste.einlesen('kfz.csv');
-  ShowMessage(IntToStr(liste.binsuche(lbSucheKennz.Text)));
 
-  //display(lstKennz, lbAnzahl, liste);
+  id:= liste.KFZ_suchen(lbSucheOrt.Text);
+  if id=-1 then
+  begin
+  ShowMessage('String "' + lbSucheOrt.Text + '" not found');
+  end
+  else
+  begin
+  displayIndex(dgvKfz, lbAnzahl, liste, id);
+  end;
 end;
 
 procedure TForm1.display(dgv: TStringGrid; anzLabel: TLabel; liste: TListe);
@@ -139,9 +147,9 @@ begin
   dgv.RowCount := dgv.RowCount + 1;
 
   dgv.Cells[0, 1] := IntToStr(index);
-  dgv.Cells[1, 1] := liste.getKennzeichen(index-1);
-  dgv.Cells[2, 1] := liste.getOrt(index-1);
-  dgv.Cells[3, 1] := liste.getBundesland(index-1);
+  dgv.Cells[1, 1] := liste.getKennzeichen(index);
+  dgv.Cells[2, 1] := liste.getOrt(index);
+  dgv.Cells[3, 1] := liste.getBundesland(index);
 
   anzLabel.Caption := 'Gesamt: 1';
 end;
