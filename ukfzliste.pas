@@ -92,7 +92,7 @@ begin
   end;
 
   CloseFile(f);
-  anzahl := aktuell;
+  self.anzahl := aktuell;
 end;
 
 procedure TListe.einlesenFilterKennzeichen(datname, query: string);
@@ -126,7 +126,7 @@ begin
   end;
 
   CloseFile(f);
-  anzahl := aktuell;
+  self.anzahl := aktuell;
   aktuell := 0;
 
 end;
@@ -163,7 +163,7 @@ begin
   end;
 
   CloseFile(f);
-  anzahl := aktuell;
+  self.anzahl := aktuell;
   aktuell := 0;
 
 end;
@@ -226,7 +226,7 @@ begin
   end;
 
   CloseFile(f);
-  anzahl := aktuell;
+  self.anzahl := aktuell;
   aktuell := 0;
 
 end;
@@ -238,17 +238,17 @@ end;
 
 function TListe.getKennzeichen(ItemIndex: cardinal): string;
 begin
-  Result := liste[ItemIndex].kennzeichen;
+  Result := self.liste[ItemIndex].kennzeichen;
 end;
 
 function TListe.getOrt(ItemIndex: cardinal): string;
 begin
-  Result := liste[ItemIndex].ort;
+  Result := self.liste[ItemIndex].ort;
 end;
 
 function TListe.getBundesland(ItemIndex: cardinal): string;
 begin
-  Result := liste[ItemIndex].bundesland;
+  Result := self.liste[ItemIndex].bundesland;
 end;
 
 end.
