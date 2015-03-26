@@ -65,24 +65,24 @@ begin
 
     //BEGIN insertion sort
 
-    SetLength(liste, length(liste) + 1);
+    SetLength(self.liste, length(self.liste) + 1);
 
     j := aktuell;
-    if length(liste) > 0 then
+    if length(self.liste) > 0 then
     begin
       while (j > 1) and (liste[j - 1].ort > Data[1]) do
       begin
-        liste[j] := liste[j - 1];
+        self.liste[j] := liste[j - 1];
         Dec(j);
       end;
-      liste[j] := TDatensatz.Create;
-      liste[j].definieren(Data[0], Data[1], Data[2]);
+      self.liste[j] := TDatensatz.Create;
+      self.liste[j].definieren(Data[0], Data[1], Data[2]);
     end
     else
     begin
-      SetLength(liste, 1);
-      liste[0] := TDatensatz.Create;
-      liste[0].definieren(Data[0], Data[1], Data[2]);
+      SetLength(self.liste, 1);
+      self.liste[0] := TDatensatz.Create;
+      self.liste[0].definieren(Data[0], Data[1], Data[2]);
     end;
 
     //END insertion sort
@@ -118,8 +118,8 @@ begin
 
     if (AnsiContainsStr(LowerCase(Data[0]), LowerCase(query))) then
     begin
-      liste[aktuell] := TDatensatz.Create;
-      liste[aktuell].definieren(Data[0], Data[1], Data[2]);
+      self.liste[aktuell] := TDatensatz.Create;
+      self.liste[aktuell].definieren(Data[0], Data[1], Data[2]);
 
       Inc(aktuell);
     end;
@@ -155,8 +155,8 @@ begin
 
     if (AnsiContainsStr(LowerCase(Data[1]), LowerCase(query))) then
     begin
-      liste[aktuell] := TDatensatz.Create;
-      liste[aktuell].definieren(Data[0], Data[1], Data[2]);
+      self.liste[aktuell] := TDatensatz.Create;
+      self.liste[aktuell].definieren(Data[0], Data[1], Data[2]);
 
       Inc(aktuell);
     end;
@@ -179,9 +179,9 @@ function TListe.KFZ_suchen(query: string): integer;
       mitte := (ug + og) div 2;
       //ShowMessage(liste[mitte].ort);
 
-      if LowerCase(Liste[mitte].ort) > LowerCase(query) then
+      if LowerCase(self.liste[mitte].ort) > LowerCase(query) then
         Result := binsuche(ug, mitte - 1)
-      else if LowerCase(liste[mitte].ort) < LowerCase(query) then
+      else if LowerCase(self.liste[mitte].ort) < LowerCase(query) then
         Result := binsuche(mitte + 1, og)
       else
         Result := mitte;
@@ -218,8 +218,8 @@ begin
 
     if (AnsiContainsStr(LowerCase(Data[2]), LowerCase(query))) then
     begin
-      liste[aktuell] := TDatensatz.Create;
-      liste[aktuell].definieren(Data[0], Data[1], Data[2]);
+      self.liste[aktuell] := TDatensatz.Create;
+      self.liste[aktuell].definieren(Data[0], Data[1], Data[2]);
 
       Inc(aktuell);
     end;

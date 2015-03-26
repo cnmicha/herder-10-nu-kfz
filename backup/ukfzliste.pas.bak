@@ -65,7 +65,7 @@ begin
 
     //BEGIN insertion sort
 
-    SetLength(liste, length(liste) + 1);
+    SetLength(self.liste, length(liste) + 1);
 
     j := aktuell;
     if length(liste) > 0 then
@@ -184,7 +184,6 @@ function TListe.KFZ_suchen(query: string): integer;
       else if LowerCase(liste[mitte].ort) < LowerCase(query) then
         Result := binsuche(mitte + 1, og)
       else
-        ShowMessage('found ' + IntToStr(mitte));
         Result := mitte;
     end
     else
