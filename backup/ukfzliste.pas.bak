@@ -215,7 +215,7 @@ end;
 
 function TListe.KFZ_suchen(query: string): integer;
 
-  function binsuche(ug, og: cardinal): cardinal;
+  function binsuche(ug, og: cardinal): integer;
   var
     mitte: cardinal;
   begin

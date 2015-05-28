@@ -127,7 +127,7 @@ begin
       j := aktuell;
       if length(self.liste) > 0 then
       begin
-        while (j > 1) and (liste[j - 1].ort > Data[1]) do
+        while (j > 0) and (liste[j - 1].ort > Data[1]) do
         begin
           self.liste[j] := liste[j - 1];
           Dec(j);
@@ -186,7 +186,7 @@ begin
       j := aktuell;
       if length(self.liste) > 0 then
       begin
-        while (j > 1) and (liste[j - 1].ort > Data[1]) do
+        while (j > 0) and (liste[j - 1].ort > Data[1]) do
         begin
           self.liste[j] := liste[j - 1];
           Dec(j);
@@ -271,7 +271,7 @@ begin
       j := aktuell;
       if length(self.liste) > 0 then
       begin
-        while (j > 1) and (liste[j - 1].ort > Data[1]) do
+        while (j > 0) and (liste[j - 1].ort > Data[1]) do
         begin
           self.liste[j] := liste[j - 1];
           Dec(j);
