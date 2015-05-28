@@ -70,7 +70,7 @@ begin
     j := aktuell;
     if length(self.liste) > 0 then
     begin
-      while (j > 1) and (liste[j - 1].ort > Data[1]) do
+      while (j > 0) and (liste[j - 1].ort > Data[1]) do
       begin
         self.liste[j] := self.liste[j - 1];
         Dec(j);
@@ -215,7 +215,7 @@ end;
 
 function TListe.KFZ_suchen(query: string): integer;
 
-  function binsuche(ug, og: cardinal): cardinal;
+  function binsuche(ug, og: cardinal): integer;
   var
     mitte: cardinal;
   begin
