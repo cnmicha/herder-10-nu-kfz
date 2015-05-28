@@ -98,14 +98,14 @@ begin
   liste := TListe.Create;
   liste.einlesen('kfz.csv');
 
-  id:= liste.KFZ_suchen(lbSucheOrt.Text);
-  if id=-1 then
+  id := liste.KFZ_suchen(lbSucheOrt.Text);
+  if id = -1 then
   begin
-  ShowMessage('String "' + lbSucheOrt.Text + '" not found');
+    ShowMessage('String "' + lbSucheOrt.Text + '" not found');
   end
   else
   begin
-  displayIndex(dgvKfz, lbAnzahl, liste, id);
+    displayIndex(dgvKfz, lbAnzahl, liste, id);
   end;
 end;
 

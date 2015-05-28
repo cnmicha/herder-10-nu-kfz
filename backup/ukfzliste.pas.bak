@@ -98,74 +98,111 @@ end;
 procedure TListe.einlesenFilterKennzeichen(datname, query: string);
 var
   f: TextFile;
-  aktuell: cardinal;
+  aktuell, j: cardinal;
   str: string;
   Data: TStringList;
 begin
   AssignFile(f, datname);
-  reset(f);
+  reset(f); //lock file
   aktuell := 0;
 
   while not EOF(f) do
   begin
     readln(f, str);
 
+    //split str into array seperated by ";"
     Data := nil; //truncate array
     Data := TStringList.Create;
     Data.Delimiter := ';';
     Data.StrictDelimiter := True; //space is not a delimiter
     Data.DelimitedText := str;
 
-    if (AnsiContainsStr(LowerCase(Data[0]), LowerCase(query))) then
-    begin
-      self.liste[aktuell] := TDatensatz.Create;
-      self.liste[aktuell].definieren(Data[0], Data[1], Data[2]);
 
-      Inc(aktuell);
+    //BEGIN insertion sort
+
+    SetLength(self.liste, length(self.liste) + 1);
+
+    j := aktuell;
+    if length(self.liste) > 0 then
+    begin
+      while (j > 1) and (liste[j - 1].ort > Data[1]) do
+      begin
+        self.liste[j] := liste[j - 1];
+        Dec(j);
+      end;
+      self.liste[j] := TDatensatz.Create;
+      self.liste[j].definieren(Data[0], Data[1], Data[2]);
+    end
+    else
+    begin
+      SetLength(self.liste, 1);
+      self.liste[0] := TDatensatz.Create;
+      self.liste[0].definieren(Data[0], Data[1], Data[2]);
     end;
+
+    //END insertion sort
+
+
+    Inc(aktuell);
   end;
 
   CloseFile(f);
   self.anzahl := aktuell;
-  aktuell := 0;
-
 end;
 
 procedure TListe.einlesenFilterOrt(datname, query: string);
 var
   f: TextFile;
-  aktuell: cardinal;
+  aktuell, j: cardinal;
   str: string;
-var
   Data: TStringList;
 begin
   AssignFile(f, datname);
-  reset(f);
+  reset(f); //lock file
   aktuell := 0;
 
   while not EOF(f) do
   begin
     readln(f, str);
 
+    //split str into array seperated by ";"
     Data := nil; //truncate array
     Data := TStringList.Create;
     Data.Delimiter := ';';
     Data.StrictDelimiter := True; //space is not a delimiter
     Data.DelimitedText := str;
 
-    if (AnsiContainsStr(LowerCase(Data[1]), LowerCase(query))) then
-    begin
-      self.liste[aktuell] := TDatensatz.Create;
-      self.liste[aktuell].definieren(Data[0], Data[1], Data[2]);
 
-      Inc(aktuell);
+    //BEGIN insertion sort
+
+    SetLength(self.liste, length(self.liste) + 1);
+
+    j := aktuell;
+    if length(self.liste) > 0 then
+    begin
+      while (j > 1) and (liste[j - 1].ort > Data[1]) do
+      begin
+        self.liste[j] := liste[j - 1];
+        Dec(j);
+      end;
+      self.liste[j] := TDatensatz.Create;
+      self.liste[j].definieren(Data[0], Data[1], Data[2]);
+    end
+    else
+    begin
+      SetLength(self.liste, 1);
+      self.liste[0] := TDatensatz.Create;
+      self.liste[0].definieren(Data[0], Data[1], Data[2]);
     end;
+
+    //END insertion sort
+
+
+    Inc(aktuell);
   end;
 
   CloseFile(f);
   self.anzahl := aktuell;
-  aktuell := 0;
-
 end;
 
 function TListe.KFZ_suchen(query: string): integer;
@@ -197,38 +234,56 @@ end;
 procedure TListe.einlesenFilterBundesland(datname, query: string);
 var
   f: TextFile;
-  aktuell: cardinal;
+  aktuell, j: cardinal;
   str: string;
-var
   Data: TStringList;
 begin
   AssignFile(f, datname);
-  reset(f);
+  reset(f); //lock file
   aktuell := 0;
 
   while not EOF(f) do
   begin
     readln(f, str);
 
+    //split str into array seperated by ";"
     Data := nil; //truncate array
     Data := TStringList.Create;
     Data.Delimiter := ';';
     Data.StrictDelimiter := True; //space is not a delimiter
     Data.DelimitedText := str;
 
-    if (AnsiContainsStr(LowerCase(Data[2]), LowerCase(query))) then
-    begin
-      self.liste[aktuell] := TDatensatz.Create;
-      self.liste[aktuell].definieren(Data[0], Data[1], Data[2]);
 
-      Inc(aktuell);
+    //BEGIN insertion sort
+
+    SetLength(self.liste, length(self.liste) + 1);
+
+    j := aktuell;
+    if length(self.liste) > 0 then
+    begin
+      while (j > 1) and (liste[j - 1].ort > Data[1]) do
+      begin
+        self.liste[j] := liste[j - 1];
+        Dec(j);
+      end;
+      self.liste[j] := TDatensatz.Create;
+      self.liste[j].definieren(Data[0], Data[1], Data[2]);
+    end
+    else
+    begin
+      SetLength(self.liste, 1);
+      self.liste[0] := TDatensatz.Create;
+      self.liste[0].definieren(Data[0], Data[1], Data[2]);
     end;
+
+    //END insertion sort
+
+
+    Inc(aktuell);
   end;
 
   CloseFile(f);
   self.anzahl := aktuell;
-  aktuell := 0;
-
 end;
 
 function TListe.getAnz(): cardinal;
