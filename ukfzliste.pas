@@ -72,7 +72,7 @@ begin
     begin
       while (j > 1) and (liste[j - 1].ort > Data[1]) do
       begin
-        self.liste[j] := liste[j - 1];
+        self.liste[j] := self.liste[j - 1];
         Dec(j);
       end;
       self.liste[j] := TDatensatz.Create;
@@ -215,7 +215,7 @@ end;
 
 function TListe.KFZ_suchen(query: string): integer;
 
-  function binsuche(ug, og: cardinal): integer;
+  function binsuche(ug, og: cardinal): cardinal;
   var
     mitte: cardinal;
   begin
